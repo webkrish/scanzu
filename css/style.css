@@ -39,6 +39,9 @@ header nav .my-link {
 header nav .my-link:hover {
   color: #ED2AB6 !important;
 }
+header nav .my-link:hover svg {
+  fill: #ED2AB6;
+}
 header nav .my-navbar {
   flex-grow: 0;
   width: 48% !important;
@@ -50,6 +53,7 @@ header nav .my-navbar .mybtn {
   color: #fff;
   background-color: transparent;
   padding: 8px 25px;
+  text-decoration: none;
   transition: all 0.2s linear;
 }
 header nav .my-navbar .mybtn:hover {
@@ -65,6 +69,7 @@ header nav .my-navbar .mybtn1 {
   background-color: #ED2AB6;
   padding: 8px 25px;
   transition: all 0.2s linear;
+  text-decoration: none;
 }
 header nav .my-navbar .mybtn1:hover {
   background-color: transparent;
@@ -98,6 +103,7 @@ header .main .content .mybtn1 {
   background-color: #ED2AB6;
   padding: 8px 25px;
   transition: all 0.2s linear;
+  text-decoration: none;
   margin-top: 35px;
 }
 header .main .content .mybtn1:hover {
@@ -135,6 +141,7 @@ header .main .image img {
 }
 .smart-sec .content .my-gbtn {
   font-family: "Inter", sans-serif;
+  text-decoration: none;
   font-size: 16px;
   color: #fff;
   cursor: pointer;
@@ -177,6 +184,7 @@ header .main .image img {
 }
 .vehicle-sec .content .my-gbtn {
   font-family: "Inter", sans-serif;
+  text-decoration: none;
   font-size: 16px;
   color: #fff;
   cursor: pointer;
@@ -222,6 +230,7 @@ header .main .image img {
 }
 .luggage-sec .content .my-gbtn {
   font-family: "Inter", sans-serif;
+  text-decoration: none;
   font-size: 16px;
   color: #fff;
   cursor: pointer;
@@ -261,6 +270,7 @@ header .main .image img {
 }
 .pet-sec .content .my-gbtn {
   font-family: "Inter", sans-serif;
+  text-decoration: none;
   font-size: 16px;
   color: #fff;
   cursor: pointer;
@@ -359,25 +369,35 @@ header .main .image img {
   letter-spacing: 0px;
   font-size: 16px;
 }
-.testimonial .my-wrapper {
-  justify-content: space-evenly;
-  margin: 50px 0;
+.testimonial .swiper {
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
 }
-.testimonial .my-wrapper .mycard {
+.testimonial .swiper .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.testimonial .swiper .swiper-slide .mycard {
+  width: 80%;
   padding: 10px 18px;
   border-radius: 30px;
   background-color: #fff;
   box-shadow: 0px 0px 10px 2px rgba(243, 210, 255, 0.5215686275);
   transition: all 0.3s;
 }
-.testimonial .my-wrapper .mycard h4 {
+.testimonial .swiper .swiper-slide .mycard h4 {
   padding-top: 10px;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 0;
   color: #141414;
 }
-.testimonial .my-wrapper .mycard:hover {
+.testimonial .swiper .swiper-slide .mycard:hover {
   transform: scale(1.15);
 }
 
@@ -407,6 +427,7 @@ footer .my-container .flogo {
 footer .my-container p {
   color: #371958;
   width: 32%;
+  margin-bottom: 0px !important;
 }
 
 @media screen and (max-width: 765px) {
@@ -452,4 +473,294 @@ footer .my-container p {
   footer .my-container p {
     width: 80%;
   }
+}
+.myscrolled {
+  position: absolute;
+  display: block;
+  background: linear-gradient(157deg, rgb(97, 0, 255) 12%, rgb(126, 0, 186) 50%, rgb(97, 0, 255) 81%);
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.main .center {
+  border-radius: 37px;
+  box-shadow: 0px 0px 10px 2px rgba(71, 0, 149, 0.16);
+  padding: 62px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.main .center h1 {
+  line-height: 115%;
+  font-size: 45px;
+  font-weight: 900;
+}
+.main .center p {
+  font-size: 16px;
+  color: #575757;
+  padding-bottom: 15px;
+}
+.main .center .inputbox {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0;
+}
+.main .center .inputbox input {
+  width: 100%;
+  background-color: #F5F2F6;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  color: #5C3967;
+}
+.main .center .inputbox input::-moz-placeholder {
+  color: #5C3967;
+  font-size: 15px;
+}
+.main .center .inputbox input::placeholder {
+  color: #5C3967;
+  font-size: 15px;
+}
+.main .center .inputbox input:focus-visible {
+  outline: none;
+}
+.main .center .inputbox img {
+  position: absolute;
+  padding-right: 15px;
+  width: 33px;
+}
+.main .center .fpass {
+  margin-top: -15px;
+  text-align: right;
+  color: #ED2AB6;
+  text-decoration: none;
+}
+.main .center .sign {
+  color: #ED2AB6;
+  text-decoration: none;
+  font-weight: 500;
+}
+.main .center .mylbtn {
+  font-family: "Inter", sans-serif;
+  border: 2px solid #ED2AB6;
+  border-radius: 40px;
+  color: #fff;
+  background-color: #ED2AB6;
+  padding: 8px 25px;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  margin: 15px 0;
+}
+.main .center .mylbtn:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.main .center .mylbtn:hover {
+  border: 2px solid #ED2AB6;
+  color: #ED2AB6;
+}
+
+.myfooter {
+  position: absolute !important;
+  bottom: 0;
+  width: 100%;
+}
+
+.sscrolled {
+  position: relative !important;
+  background: linear-gradient(157deg, rgb(97, 0, 255) 12%, rgb(126, 0, 186) 50%, rgb(97, 0, 255) 81%);
+}
+
+.smain {
+  display: flex;
+  margin: 50px auto;
+  align-items: center;
+  justify-content: center;
+}
+.smain .center {
+  border-radius: 37px;
+  box-shadow: 0px 0px 10px 2px rgba(71, 0, 149, 0.16);
+  padding: 62px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.smain .center h1 {
+  line-height: 115%;
+  font-size: 45px;
+  font-weight: 900;
+}
+.smain .center p {
+  font-size: 16px;
+  color: #575757;
+  padding-bottom: 15px;
+}
+.smain .center .inputbox {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0;
+}
+.smain .center .inputbox input {
+  width: 100%;
+  background-color: #F5F2F6;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  color: #5C3967;
+}
+.smain .center .inputbox input::-moz-placeholder {
+  color: #5C3967;
+  font-size: 15px;
+}
+.smain .center .inputbox input::placeholder {
+  color: #5C3967;
+  font-size: 15px;
+}
+.smain .center .inputbox input:focus-visible {
+  outline: none;
+}
+.smain .center .inputbox img {
+  position: absolute;
+  padding-right: 15px;
+  width: 33px;
+}
+.smain .center .fpass {
+  margin-top: -15px;
+  text-align: right;
+  color: #ED2AB6;
+  text-decoration: none;
+}
+.smain .center .sign {
+  color: #ED2AB6;
+  text-decoration: none;
+  font-weight: 500;
+}
+.smain .center .mylbtn {
+  font-family: "Inter", sans-serif;
+  border: 2px solid #ED2AB6;
+  border-radius: 40px;
+  color: #fff;
+  background-color: #ED2AB6;
+  padding: 8px 25px;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  margin: 15px 0;
+}
+.smain .center .mylbtn:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.smain .center .mylbtn:hover {
+  border: 2px solid #ED2AB6;
+  color: #ED2AB6;
+}
+
+.myfooter {
+  position: absolute !important;
+  bottom: 0;
+  width: 100%;
+}
+
+.vmain {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+.vmain .center {
+  border-radius: 37px;
+  box-shadow: 0px 0px 10px 2px rgba(71, 0, 149, 0.16);
+  padding: 62px;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+.vmain .center h1 {
+  line-height: 115%;
+  font-size: 45px;
+  font-weight: 900;
+}
+.vmain .center p {
+  font-size: 16px;
+  color: #575757;
+  padding-bottom: 15px;
+}
+.vmain .center .inputbox {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0;
+}
+.vmain .center .inputbox input {
+  margin: 0 5px;
+  width: 100%;
+  background-color: #F5F2F6;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  color: #5C3967;
+}
+.vmain .center .inputbox input::-moz-placeholder {
+  color: #5C3967;
+  font-size: 15px;
+}
+.vmain .center .inputbox input::placeholder {
+  color: #5C3967;
+  font-size: 15px;
+}
+.vmain .center .inputbox input:focus-visible {
+  outline: none;
+}
+.vmain .center .inputbox input::-webkit-inner-spin-button,
+.vmain .center .inputbox input ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.vmain .center .inputbox img {
+  position: absolute;
+  padding-right: 15px;
+  width: 33px;
+}
+.vmain .center .fpass {
+  margin-top: -15px;
+  text-align: right;
+  color: #ED2AB6;
+  text-decoration: none;
+}
+.vmain .center .sign {
+  color: #ED2AB6;
+  text-decoration: none;
+  font-weight: 500;
+}
+.vmain .center .mylbtn {
+  font-family: "Inter", sans-serif;
+  border: 2px solid #ED2AB6;
+  border-radius: 40px;
+  color: #fff;
+  background-color: #ED2AB6;
+  padding: 8px 25px;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  margin: 15px 0;
+}
+.vmain .center .mylbtn:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.vmain .center .mylbtn:hover {
+  border: 2px solid #ED2AB6;
+  color: #ED2AB6;
 }/*# sourceMappingURL=style.css.map */
