@@ -982,6 +982,9 @@ footer .my-container p {
     margin-top: 50px;
   }
 }
+.cart-section {
+  height: 90vh;
+}
 .cart-section h1 {
   font-size: 35px;
   line-height: 115.7%;
@@ -1136,6 +1139,9 @@ footer .my-container p {
 }
 
 @media screen and (max-width: 800px) {
+  .cart-section {
+    height: auto;
+  }
   .cart-section .cart-item .list .item .content {
     width: 80%;
   }
@@ -1193,5 +1199,537 @@ footer .my-container p {
   }
   .address-sec .first {
     width: 100%;
+  }
+}
+.account-section {
+  height: 85vh;
+}
+.account-section h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+.account-section .asection .account {
+  margin: 20px 0;
+}
+.account-section .asection .account ul {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 21px rgba(72, 0, 149, 0.16);
+  padding: 15px 0;
+}
+.account-section .asection .account ul li {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  transition: all 0.3s;
+}
+.account-section .asection .account ul li a {
+  color: #575757;
+  font-weight: 500;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+.account-section .asection .account ul li a:active {
+  color: #6F0A9D;
+}
+.account-section .asection .account ul li:hover {
+  background-color: #F3ECF8;
+}
+.account-section .asection .account ul li:hover a {
+  color: #6F0A9D;
+}
+.account-section .asection .account ul li:hover:active {
+  background-color: #F3ECF8;
+}
+.account-section .asection .account ul li:hover:active a {
+  color: #6F0A9D;
+}
+.account-section .asection .profile {
+  margin-left: 20px;
+}
+.account-section .asection .profile h4 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #141414;
+}
+.account-section .asection .profile .info {
+  width: 45%;
+}
+.account-section .asection .profile .info .first {
+  margin: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.account-section .asection .profile .info .first p {
+  color: #575757;
+  font-weight: 400;
+}
+.account-section .asection .profile .info .first h6 {
+  color: #141414;
+  font-size: 17px;
+  font-weight: 600;
+  width: 60%;
+}
+.account-section .asection .profile .info .btn-div {
+  margin: 30px 0;
+}
+.account-section .asection .profile .info .btn-div .gbtn {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 8px 25px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-image: linear-gradient(95deg, rgb(237, 42, 182) 0%, rgb(71, 0, 149) 100%);
+  padding: 15px 100px;
+  display: block;
+  width: 100%;
+}
+
+@media screen and (max-width: 993px) {
+  .account-section .asection .profile {
+    margin-left: 0;
+  }
+  .account-section .asection .profile .info {
+    margin-top: 15px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .account-section {
+    height: 100vh;
+  }
+  .account-section .asection .profile .info .btn-div .gbtn {
+    padding: 15px 50px;
+  }
+}
+.order-section {
+  min-height: 90vh;
+}
+.order-section h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+.order-section .asection .account {
+  margin: 20px 0;
+}
+.order-section .asection .account ul {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 21px rgba(72, 0, 149, 0.16);
+  padding: 15px 0;
+}
+.order-section .asection .account ul li {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  transition: all 0.3s;
+}
+.order-section .asection .account ul li a {
+  color: #575757;
+  font-weight: 500;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+.order-section .asection .account ul li a:active {
+  color: #6F0A9D;
+}
+.order-section .asection .account ul li:hover {
+  background-color: #F3ECF8;
+}
+.order-section .asection .account ul li:hover a {
+  color: #6F0A9D;
+}
+.order-section .asection .account ul li:hover:active {
+  background-color: #F3ECF8;
+}
+.order-section .asection .account ul li:hover:active a {
+  color: #6F0A9D;
+}
+.order-section .asection .profile h4 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #141414;
+}
+.order-section .asection .profile .my-tab .item {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #E5DFEB;
+  border-radius: 10px;
+  padding: 15px;
+}
+.order-section .asection .profile .my-tab .item .content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.order-section .asection .profile .my-tab .item .content .image {
+  width: 20%;
+}
+.order-section .asection .profile .my-tab .item .content .image img {
+  width: 100%;
+}
+.order-section .asection .profile .my-tab .item .content .text {
+  margin-left: 28px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.order-section .asection .profile .my-tab .item .content .text .order-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.order-section .asection .profile .my-tab .item .content .text .order-info p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #575757;
+}
+.order-section .asection .profile .my-tab .item .content .text .order-info .Processing {
+  color: #F67803;
+}
+.order-section .asection .profile .my-tab .item .content .text h4 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #141414;
+}
+.order-section .asection .profile .my-tab .item .content .text p {
+  color: #92009F;
+  font-size: 22px;
+  font-weight: 600;
+}
+.order-section .asection .profile .my-tab .item .content .text .count {
+  border: 0.5px solid #394468;
+  width: 100px;
+  border-radius: 20px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-section .asection .profile .my-tab .item .content .text .count p {
+  display: inline;
+  color: #141414;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+.order-section .asection .profile .my-tab2 .item {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #E5DFEB;
+  border-radius: 10px;
+  padding: 15px;
+}
+.order-section .asection .profile .my-tab2 .item .content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.order-section .asection .profile .my-tab2 .item .content .image {
+  width: 20%;
+}
+.order-section .asection .profile .my-tab2 .item .content .image img {
+  width: 100%;
+}
+.order-section .asection .profile .my-tab2 .item .content .text {
+  margin-left: 28px;
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.order-section .asection .profile .my-tab2 .item .content .text .order-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.order-section .asection .profile .my-tab2 .item .content .text .order-info p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #575757;
+}
+.order-section .asection .profile .my-tab2 .item .content .text .order-info .Processing {
+  color: #06B24B;
+}
+.order-section .asection .profile .my-tab2 .item .content .text h4 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #141414;
+}
+.order-section .asection .profile .my-tab2 .item .content .text p {
+  color: #92009F;
+  font-size: 22px;
+  font-weight: 600;
+}
+.order-section .asection .profile .my-tab2 .item .content .text .count {
+  border: 0.5px solid #394468;
+  width: 100px;
+  border-radius: 20px;
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order-section .asection .profile .my-tab2 .item .content .text .count p {
+  display: inline;
+  color: #141414;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.family-section {
+  min-height: 90vh;
+}
+.family-section h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+.family-section .asection .account {
+  margin: 20px 0;
+}
+.family-section .asection .account ul {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 21px rgba(72, 0, 149, 0.16);
+  padding: 15px 0;
+}
+.family-section .asection .account ul li {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  transition: all 0.3s;
+}
+.family-section .asection .account ul li a {
+  color: #575757;
+  font-weight: 500;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+.family-section .asection .account ul li a:active {
+  color: #6F0A9D;
+}
+.family-section .asection .account ul li:hover {
+  background-color: #F3ECF8;
+}
+.family-section .asection .account ul li:hover a {
+  color: #6F0A9D;
+}
+.family-section .asection .account ul li:hover:active {
+  background-color: #F3ECF8;
+}
+.family-section .asection .account ul li:hover:active a {
+  color: #6F0A9D;
+}
+.family-section .asection .profile h4 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #141414;
+}
+.family-section .asection .profile .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #F3ECF8;
+  margin: 10px 0;
+}
+.family-section .asection .profile .item .content {
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+.family-section .asection .profile .item .content .image {
+  width: 10%;
+}
+.family-section .asection .profile .item .content .image img {
+  width: 100%;
+}
+.family-section .asection .profile .item .content .text {
+  padding-left: 15px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.family-section .asection .profile .item .content .text h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #141414;
+}
+.family-section .asection .profile .item .content .text p {
+  color: #7E00BA;
+  margin: 0;
+  margin-right: 15px;
+}
+.family-section .asection .profile .item .content .text p span {
+  font-weight: 600;
+}
+.family-section .asection .profile .item .content .text .para {
+  display: flex;
+  flex-wrap: wrap;
+}
+.family-section .asection .profile .item .svg {
+  width: 12%;
+  text-align: center;
+}
+.family-section .asection .profile .btn-div {
+  margin: 55px 0;
+}
+.family-section .asection .profile .btn-div .gbtn {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 8px 25px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-image: linear-gradient(95deg, rgb(237, 42, 182) 0%, rgb(71, 0, 149) 100%);
+  padding: 15px 100px;
+  display: block;
+  width: 100%;
+}
+
+.add-section {
+  min-height: 90vh;
+}
+.add-section h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 15px 0;
+}
+.add-section .asection .account {
+  margin: 20px 0;
+}
+.add-section .asection .account ul {
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 21px rgba(72, 0, 149, 0.16);
+  padding: 15px 0;
+}
+.add-section .asection .account ul li {
+  list-style: none;
+  margin: 0;
+  padding: 15px;
+  transition: all 0.3s;
+}
+.add-section .asection .account ul li a {
+  color: #575757;
+  font-weight: 500;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s;
+  font-size: 16px;
+}
+.add-section .asection .account ul li a:active {
+  color: #6F0A9D;
+}
+.add-section .asection .account ul li:hover {
+  background-color: #F3ECF8;
+}
+.add-section .asection .account ul li:hover a {
+  color: #6F0A9D;
+}
+.add-section .asection .account ul li:hover:active {
+  background-color: #F3ECF8;
+}
+.add-section .asection .account ul li:hover:active a {
+  color: #6F0A9D;
+}
+.add-section .asection .profile {
+  padding-left: 15px;
+}
+.add-section .asection .profile h4 {
+  font-size: 23px;
+  font-weight: 700;
+  color: #141414;
+}
+.add-section .asection .profile .inputbox {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 25px;
+  padding: 0;
+}
+.add-section .asection .profile .inputbox input {
+  width: 100%;
+  background-color: #F5F2F6;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  color: #5C3967;
+}
+.add-section .asection .profile .inputbox input::-moz-placeholder {
+  color: #5C3967;
+  font-size: 15px;
+}
+.add-section .asection .profile .inputbox input::placeholder {
+  color: #5C3967;
+  font-size: 15px;
+}
+.add-section .asection .profile .inputbox input:focus-visible {
+  outline: none;
+}
+.add-section .asection .profile .inputbox img {
+  position: absolute;
+  padding-right: 15px;
+  width: 33px;
+}
+.add-section .asection .profile .btn-div {
+  margin: 55px 0;
+}
+.add-section .asection .profile .btn-div .mybtn {
+  font-family: "Inter", sans-serif;
+  border: 2px solid #ED2AB6;
+  border-radius: 40px;
+  color: #fff;
+  background-color: #ED2AB6;
+  padding: 8px 25px;
+  transition: all 0.2s linear;
+  text-decoration: none;
+  padding: 15px 100px;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.add-section .asection .profile .btn-div .mybtn:hover {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+.add-section .asection .profile .btn-div .mybtn:hover {
+  color: #ED2AB6;
+  border: 2px solid #ED2AB6;
+}
+
+@media screen and (max-width: 430px) {
+  .add-section .asection .profile .btn-div .mybtn {
+    padding: 15px 15px;
   }
 }/*# sourceMappingURL=style.css.map */

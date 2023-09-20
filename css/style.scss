@@ -1203,6 +1203,8 @@ footer {
 // =====================cart section started =============================
 
 .cart-section {
+    height: 90vh;
+
     h1 {
         font-size: 35px;
         line-height: 115.7%;
@@ -1281,8 +1283,10 @@ footer {
                 }
             }
         }
+
         .checkout-box {
             margin: 20px 0;
+
             .box {
                 margin-bottom: 65px;
                 border-radius: 13px;
@@ -1365,9 +1369,11 @@ footer {
                     }
                 }
             }
-            .btn-div{
+
+            .btn-div {
                 margin: 55px 0;
-                .gbtn{
+
+                .gbtn {
                     @include gbtn;
                     padding: 15px 100px;
                     display: block;
@@ -1377,20 +1383,25 @@ footer {
         }
     }
 }
+
 @media screen and (max-width: 800px) {
-    .cart-section{
-        .cart-item{
-            .list{
-                .item{
-                    .content{
+    .cart-section {
+        height: auto;
+
+        .cart-item {
+            .list {
+                .item {
+                    .content {
                         width: 80%;
-                        .image{
-                            img{
+
+                        .image {
+                            img {
                                 width: 100%;
                             }
                         }
-                        .text{
-                            h4{
+
+                        .text {
+                            h4 {
                                 font-size: 25px;
                             }
                         }
@@ -1406,19 +1417,22 @@ footer {
 // ===================== checkout section ================================
 
 
-.address-sec{
+.address-sec {
     display: flex;
     justify-content: space-between;
     margin: 50px 0;
-    .first{
+
+    .first {
         width: 49%;
-        .inputbox{
+
+        .inputbox {
             position: relative;
             display: flex;
             justify-content: flex-end;
             align-items: center;
             margin-bottom: 25px;
             padding: 0;
+
             input {
                 width: 100%;
                 background-color: #F5F2F6;
@@ -1436,6 +1450,7 @@ footer {
                     outline: none;
                 }
             }
+
             img {
                 position: absolute;
                 padding-right: 15px;
@@ -1446,11 +1461,667 @@ footer {
 }
 
 @media screen and (max-width: 400px) {
-    .address-sec{
+    .address-sec {
         flex-direction: column;
-        .first{
+
+        .first {
             width: 100%;
         }
     }
 }
+
 // ===================== checkout section ================================
+
+
+// ============================ Account Section ===========================
+.account-section {
+    height: 85vh;
+
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        padding: 15px 0;
+    }
+
+    .asection {
+        .account {
+            margin: 20px 0;
+
+            ul {
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0 4px 21px rgba(72, 0, 149, 0.16);
+                padding: 15px 0;
+
+                li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 15px;
+                    transition: all .3s;
+
+                    a {
+                        color: #575757;
+                        font-weight: 500;
+                        padding: 10px;
+                        text-decoration: none;
+                        transition: all .3s;
+                        font-size: 16px;
+
+                        &:active {
+                            color: #6F0A9D;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #F3ECF8;
+
+                        a {
+                            color: #6F0A9D;
+                        }
+
+                        &:active {
+                            background-color: #F3ECF8;
+
+                            a {
+                                color: #6F0A9D;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile {
+            margin-left: 20px;
+
+            h4 {
+                font-size: 23px;
+                font-weight: 700;
+                color: #141414;
+            }
+
+            .info {
+                width: 45%;
+
+                .first {
+                    margin: 15px 0;
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        color: #575757;
+                        font-weight: 400;
+                    }
+
+                    h6 {
+                        color: #141414;
+                        font-size: 17px;
+                        font-weight: 600;
+                        width: 60%;
+                    }
+                }
+
+                .btn-div {
+                    margin: 30px 0;
+
+                    .gbtn {
+                        @include gbtn;
+                        padding: 15px 100px;
+                        display: block;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:993px) {
+    .account-section {
+        .asection {
+            .profile {
+                margin-left: 0;
+
+                .info {
+                    margin-top: 15px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:770px) {
+    .account-section {
+        height: 100vh;
+
+        .asection {
+            .profile {
+                .info {
+                    .btn-div {
+                        .gbtn {
+                            padding: 15px 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ============================ Account Section ===========================
+
+
+// ============================ Order Section =============================
+
+.order-section {
+    min-height: 90vh;
+
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        padding: 15px 0;
+    }
+
+    .asection {
+        .account {
+            margin: 20px 0;
+
+            ul {
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0 4px 21px rgba(72, 0, 149, 0.16);
+                padding: 15px 0;
+
+                li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 15px;
+                    transition: all .3s;
+
+                    a {
+                        color: #575757;
+                        font-weight: 500;
+                        padding: 10px;
+                        text-decoration: none;
+                        transition: all .3s;
+                        font-size: 16px;
+
+                        &:active {
+                            color: #6F0A9D;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #F3ECF8;
+
+                        a {
+                            color: #6F0A9D;
+                        }
+
+                        &:active {
+                            background-color: #F3ECF8;
+
+                            a {
+                                color: #6F0A9D;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile {
+            h4 {
+                font-size: 23px;
+                font-weight: 700;
+                color: #141414;
+            }
+
+            .my-tab {
+                .item {
+                    margin: 20px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid #E5DFEB;
+                    border-radius: 10px;
+                    padding: 15px;
+
+                    .content {
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+
+                        .image {
+                            width: 20%;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .text {
+                            margin-left: 28px;
+                            width: 65%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            .order-info {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+
+                                p {
+                                    margin: 0;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: #575757;
+                                }
+
+                                .Processing {
+                                    color: #F67803;
+                                }
+                            }
+
+                            h4 {
+                                font-size: 28px;
+                                font-weight: 600;
+                                color: #141414;
+                            }
+
+                            p {
+                                color: #92009F;
+                                font-size: 22px;
+                                font-weight: 600;
+                            }
+
+                            .count {
+                                border: .5px solid #394468;
+                                width: 100px;
+                                border-radius: 20px;
+                                padding: 2px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+
+
+                                p {
+                                    display: inline;
+                                    color: #141414;
+                                    font-size: 16px;
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .my-tab2 {
+                .item {
+                    margin: 20px 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid #E5DFEB;
+                    border-radius: 10px;
+                    padding: 15px;
+
+                    .content {
+                        display: flex;
+                        // justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+
+                        .image {
+                            width: 20%;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+
+                        .text {
+                            margin-left: 28px;
+                            width: 65%;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+
+                            .order-info {
+                                display: flex;
+                                justify-content: space-between;
+                                flex-wrap: wrap;
+
+                                p {
+                                    margin: 0;
+                                    font-size: 16px;
+                                    font-weight: 500;
+                                    color: #575757;
+                                }
+
+                                .Processing {
+                                    color: #06B24B;
+                                }
+                            }
+
+                            h4 {
+                                font-size: 28px;
+                                font-weight: 600;
+                                color: #141414;
+                            }
+
+                            p {
+                                color: #92009F;
+                                font-size: 22px;
+                                font-weight: 600;
+                            }
+
+                            .count {
+                                border: .5px solid #394468;
+                                width: 100px;
+                                border-radius: 20px;
+                                padding: 2px;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+
+
+
+                                p {
+                                    display: inline;
+                                    color: #141414;
+                                    font-size: 16px;
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+// ============================ Order Section =============================
+
+
+// ============================ Family Member section =========================
+
+
+.family-section {
+    min-height: 90vh;
+
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        padding: 15px 0;
+    }
+
+    .asection {
+        .account {
+            margin: 20px 0;
+
+            ul {
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0 4px 21px rgba(72, 0, 149, 0.16);
+                padding: 15px 0;
+
+                li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 15px;
+                    transition: all .3s;
+
+                    a {
+                        color: #575757;
+                        font-weight: 500;
+                        padding: 10px;
+                        text-decoration: none;
+                        transition: all .3s;
+                        font-size: 16px;
+
+                        &:active {
+                            color: #6F0A9D;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #F3ECF8;
+
+                        a {
+                            color: #6F0A9D;
+                        }
+
+                        &:active {
+                            background-color: #F3ECF8;
+
+                            a {
+                                color: #6F0A9D;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile {
+            h4 {
+                font-size: 23px;
+                font-weight: 700;
+                color: #141414;
+            }
+
+            .item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 10px;
+                border-radius: 10px;
+                background-color: #F3ECF8;
+                margin: 10px 0;
+
+                .content {
+                    display: flex;
+                    align-items: center;
+                    width: 80%;
+
+                    .image {
+                        width: 10%;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .text {
+                        padding-left: 15px;
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+
+                        h4 {
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: #141414;
+                        }
+                        p{
+                            color: #7E00BA;
+                            margin: 0;
+                            margin-right: 15px;
+                            span{
+                                font-weight: 600;
+                            }
+                        }
+
+                        .para {
+                            display: flex;
+                            flex-wrap: wrap;
+                        }
+                    }
+                }
+
+                .svg {
+                    width: 12%;
+                    text-align: center;
+                }
+            }
+            .btn-div {
+                margin: 55px 0;
+
+                .gbtn {
+                    @include gbtn;
+                    padding: 15px 100px;
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+}
+
+// ============================ Family Member section =========================
+
+
+
+// ============================ add Member section =========================
+.add-section {
+    min-height: 90vh;
+
+    h1 {
+        font-size: 30px;
+        font-weight: 700;
+        padding: 15px 0;
+    }
+
+    .asection {
+        .account {
+            margin: 20px 0;
+
+            ul {
+                background-color: #fff;
+                border-radius: 20px;
+                box-shadow: 0 4px 21px rgba(72, 0, 149, 0.16);
+                padding: 15px 0;
+
+                li {
+                    list-style: none;
+                    margin: 0;
+                    padding: 15px;
+                    transition: all .3s;
+
+                    a {
+                        color: #575757;
+                        font-weight: 500;
+                        padding: 10px;
+                        text-decoration: none;
+                        transition: all .3s;
+                        font-size: 16px;
+
+                        &:active {
+                            color: #6F0A9D;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: #F3ECF8;
+
+                        a {
+                            color: #6F0A9D;
+                        }
+
+                        &:active {
+                            background-color: #F3ECF8;
+
+                            a {
+                                color: #6F0A9D;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .profile {
+            padding-left: 15px;
+            h4 {
+                font-size: 23px;
+                font-weight: 700;
+                color: #141414;
+            }
+
+            .inputbox {
+                position: relative;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                margin-bottom: 25px;
+                padding: 0;
+    
+                input {
+                    width: 100%;
+                    background-color: #F5F2F6;
+                    border-radius: 10px;
+                    border: none;
+                    padding: 15px;
+                    color: #5C3967;
+    
+                    &::placeholder {
+                        color: #5C3967;
+                        font-size: 15px;
+                    }
+    
+                    &:focus-visible {
+                        outline: none;
+                    }
+                }
+    
+                img {
+                    position: absolute;
+                    padding-right: 15px;
+                    width: 33px;
+                }
+            }
+            .btn-div {
+                margin: 55px 0;
+
+                .mybtn {
+                    @include btn2;
+                    padding: 15px 100px;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    &:hover{
+                        color: #ED2AB6;
+                        border: 2px solid #ED2AB6;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .add-section{
+        .asection{
+            .profile{
+                .btn-div{
+                    .mybtn{
+                        padding: 15px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+// ============================ add Member section =========================

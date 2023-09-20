@@ -526,10 +526,11 @@ button {
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
 button:not(:disabled) {
-    background-color: #EFECFF;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-bottom: 5px;
+    background-color: #F5E9FF;
+    color: #394468;
+    transition: all .3s;
+    margin-right: 15px;
+    border-radius: 8px;
 }
 
 ::-moz-focus-inner {
@@ -4427,13 +4428,17 @@ fieldset:disabled .btn {
 }
 
 .nav-pills .nav-link {
-    border-radius: var(--bs-nav-pills-border-radius)
+    margin: 5px 0;
+    background-color: #F5E9FF;
+    color: #394468;
+    transition: all .3s;
+    margin-right: 15px;
 }
 
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
-    color: var(--bs-nav-pills-link-active-color);
-    background-color: var(--bs-nav-pills-link-active-bg)
+    background-color: #6A00C5;
+    color:#fff;
 }
 
 .nav-underline {
