@@ -312,7 +312,7 @@ address {
 
 ol,
 ul {
-    padding-left: 2rem
+    padding-left: 0rem
 }
 
 dl,
@@ -526,7 +526,7 @@ button {
 [type=reset]:not(:disabled),
 [type=submit]:not(:disabled),
 button:not(:disabled) {
-    background-color: #F5E9FF;
+    background-color: #EFECFF;
     color: #394468;
     transition: all .3s;
     margin-right: 15px;
@@ -4586,6 +4586,7 @@ fieldset:disabled .btn {
 
 .navbar-collapse {
     flex-basis: 100%;
+    transition: all .2s linear;
     flex-grow: 1;
     align-items: center
 }
@@ -5302,7 +5303,8 @@ fieldset:disabled .btn {
 }
 
 .accordion-item:not(:first-of-type) {
-    border-top: 0
+    border-top: 0;
+    margin-bottom: 5px;
 }
 
 .accordion-item:last-of-type {

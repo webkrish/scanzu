@@ -38,7 +38,7 @@
                         </li>
                     </ul>
                     
-                    <!-- <a class="mybtn" href="login.html">Log In</a> -->
+                    <a class="mybtn" href="login.html">Log In</a>
                     <a class="mybtn1" href="signup.html">Sign Up</a>
                 </div>
             </div>
@@ -48,7 +48,7 @@
 
     <div class="main container my-container">
         <div class="row center">
-            <h1>Welcome Back!</h1>
+            <h1 class="big-heading">Welcome Back!</h1>
             <p>Log In with your email or mobile number & password</p>
             <div class="inputbox">
                 
@@ -56,8 +56,8 @@
             </div>
             <div class="inputbox icon">
 
-                <input type="password"  placeholder="Enter password">
-                <img src="img/icon.png" alt="">
+                <input type="password"  placeholder="Enter password" id="password">
+                <img src="img/icon.png" alt="plogo" id="Logo" onclick="show()">
             </div>
             <a href="fpassword.html" class="fpass">Forgot Password?</a>
             <a href="#" class="mylbtn">Log In</a>
@@ -81,5 +81,18 @@
     </footer>
     
     <script defer src="js/bootstrap.min.js"></script>
+    <script>
+        let password = document.getElementById("password")
+        let togggle = document.getElementById("Logo")
+
+        function show() {
+            if(password.type == "password"){
+                password.type = "text"
+            } else{
+                password.type = "password"
+            }
+        }
+
+    </script>
 </body>
 </html>

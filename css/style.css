@@ -6,9 +6,35 @@
   scroll-behavior: smooth;
 }
 
+.my-header {
+  width: 100%;
+  height: 100vh;
+}
+
+.big-heading {
+  color: #141414;
+  letter-spacing: 0;
+  line-height: 115.7%;
+  font-weight: bolder;
+  font-size: 45px;
+}
+
+@media screen and (max-width: 750px) {
+  .big-heading {
+    font-size: 25px;
+  }
+}
 .my-container {
   max-width: 1202px !important;
   margin: 0 auto;
+}
+
+.content {
+  padding-bottom: 30px;
+}
+
+.bottom {
+  padding-bottom: 25px;
 }
 
 .scrolled {
@@ -19,16 +45,21 @@
   transition: all 0.3s;
 }
 
-header {
-  background-image: url(../img/BG.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+header .bgvideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
 }
 header nav {
   width: 100%;
   z-index: 999;
   transition: all 0.3s;
+  padding: 0 !important;
 }
 header nav .my-logo {
   width: 20%;
@@ -37,7 +68,7 @@ header nav .my-link {
   font-weight: 600;
   color: #fff !important;
   transition: all 0.2s;
-  padding: 0 12px !important;
+  padding: 13px 12px !important;
 }
 header nav .my-link:hover {
   color: #ED2AB6 !important;
@@ -51,35 +82,66 @@ header nav .my-navbar {
 }
 header nav .my-navbar .mybtn {
   font-family: "Inter", sans-serif;
-  border: 2px solid #fff;
+  box-shadow: inset 0px 0px 0px 1px #fff;
   border-radius: 40px;
   color: #fff;
   background-color: transparent;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-decoration: none;
   transition: all 0.2s linear;
+  margin-right: 15px;
 }
 header nav .my-navbar .mybtn:hover {
   background-color: #ED2AB6;
-  border: 2px solid #ED2AB6;
+  box-shadow: inset 0px 0px 0px 1px #ED2AB6;
 }
 header nav .my-navbar .mybtn1 {
   margin-left: 15px;
   font-family: "Inter", sans-serif;
-  border: 2px solid #ED2AB6;
-  border-radius: 40px;
-  color: #fff;
-  background-color: #ED2AB6;
-  padding: 8px 25px;
-  transition: all 0.2s linear;
   text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 10px 28px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-image: linear-gradient(95deg, rgb(237, 42, 182) 0%, rgb(71, 0, 149) 100%);
 }
-header nav .my-navbar .mybtn1:hover {
-  background-color: transparent;
-  border: 2px solid #fff;
+header nav .dropdown {
+  position: relative;
+  transition: all 0.3s;
+}
+header nav .dropdown:hover {
+  transition: all 0.3s;
+}
+header nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+header nav .dropdown .dropdown-content {
+  width: 100%;
+  display: none;
+  top: 52px;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  box-shadow: -1px 2px 7px 0px rgba(0, 0, 0, 0.2705882353);
+}
+header nav .dropdown .dropdown-content ul {
+  margin-left: 8px;
+}
+header nav .dropdown .dropdown-content ul li {
+  list-style: none;
+  padding: 8px;
+}
+header nav .dropdown .dropdown-content ul li a {
+  text-decoration: none;
+  color: #575757;
 }
 header .main {
-  padding-top: 180px;
+  height: 100vh;
   padding-bottom: 50px;
   align-items: center;
 }
@@ -88,38 +150,80 @@ header .main .content {
   color: #fff;
 }
 header .main .content h1 {
-  letter-spacing: 0;
-  line-height: 115.7%;
-  font-weight: bolder;
-  font-size: 45px;
+  color: #fff;
 }
 header .main .content p {
   line-height: 182%;
   letter-spacing: 0px;
   font-size: 16px;
+  padding-bottom: 45px;
 }
 header .main .content .mybtn1 {
   font-family: "Inter", sans-serif;
-  border: 2px solid #ED2AB6;
-  border-radius: 40px;
-  color: #fff;
-  background-color: #ED2AB6;
-  padding: 8px 25px;
-  transition: all 0.2s linear;
   text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 10px 28px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-image: linear-gradient(95deg, rgb(237, 42, 182) 0%, rgb(71, 0, 149) 100%);
   margin-top: 35px;
-}
-header .main .content .mybtn1:hover {
-  background-color: transparent;
-  border: 2px solid #fff;
 }
 header .main .image img {
   width: 100%;
 }
 
+@media (min-aspect-ratio: 16/9) {
+  header .bgvideo {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  header .bgvideo {
+    width: auto;
+    height: 100%;
+  }
+}
+@media screen and (max-width: 990px) {
+  header nav .my-navbar {
+    text-align: center;
+  }
+  header nav .my-navbar .anav {
+    height: 100vh;
+  }
+  header nav .my-navbar .anav .dropdown .dropdown-content {
+    top: 66px;
+    height: 132px;
+  }
+  header nav .my-navbar ul {
+    margin-top: 25px;
+    height: 40vh;
+  }
+  header nav .my-navbar ul li {
+    padding: 15px 0;
+  }
+  header nav .my-navbar .mybtn {
+    display: block;
+    margin: 0;
+  }
+  header nav .my-navbar .mybtn1 {
+    display: block;
+    margin: 0;
+    margin-top: 15px;
+    margin-bottom: 225px;
+  }
+}
 .smart-sec {
   padding: 40px 0;
   align-items: center;
+}
+.smart-sec .content {
+  padding-bottom: 20px;
 }
 .smart-sec .content h4 {
   font-size: 21px;
@@ -127,13 +231,6 @@ header .main .image img {
   line-height: 115.7%;
   letter-spacing: 0px;
   color: #92009F;
-}
-.smart-sec .content h1 {
-  font-size: 45px;
-  font-weight: bolder;
-  color: #141414;
-  line-height: 115.7%;
-  letter-spacing: 0px;
 }
 .smart-sec .content p {
   color: #575757;
@@ -149,7 +246,7 @@ header .main .image img {
   color: #fff;
   cursor: pointer;
   margin: 15px 0;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -171,13 +268,6 @@ header .main .image img {
   letter-spacing: 0px;
   color: #92009F;
 }
-.vehicle-sec .content h1 {
-  font-size: 45px;
-  font-weight: bolder;
-  color: #141414;
-  line-height: 115.7%;
-  letter-spacing: 0px;
-}
 .vehicle-sec .content p {
   color: #575757;
   font-weight: 400;
@@ -192,7 +282,7 @@ header .main .image img {
   color: #fff;
   cursor: pointer;
   margin: 15px 0;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -217,13 +307,6 @@ header .main .image img {
   letter-spacing: 0px;
   color: #92009F;
 }
-.luggage-sec .content h1 {
-  font-size: 45px;
-  font-weight: bolder;
-  color: #141414;
-  line-height: 115.7%;
-  letter-spacing: 0px;
-}
 .luggage-sec .content p {
   color: #575757;
   font-weight: 400;
@@ -238,7 +321,7 @@ header .main .image img {
   color: #fff;
   cursor: pointer;
   margin: 15px 0;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -257,13 +340,6 @@ header .main .image img {
   letter-spacing: 0px;
   color: #92009F;
 }
-.pet-sec .content h1 {
-  font-size: 45px;
-  font-weight: bolder;
-  color: #141414;
-  line-height: 115.7%;
-  letter-spacing: 0px;
-}
 .pet-sec .content p {
   color: #575757;
   font-weight: 400;
@@ -278,7 +354,7 @@ header .main .image img {
   color: #fff;
   cursor: pointer;
   margin: 15px 0;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -302,11 +378,6 @@ header .main .image img {
 }
 .faq-sec h1 {
   text-align: center;
-  font-size: 45px;
-  font-weight: bolder;
-  color: #141414;
-  line-height: 115.7%;
-  letter-spacing: 0px;
 }
 .faq-sec p {
   color: #575757;
@@ -328,17 +399,13 @@ header .main .image img {
 }
 .app .my-container .content h1 {
   color: #fff;
-  padding-bottom: 15px;
-  font-size: 40px;
-  font-weight: bolder;
-  line-height: 115.7%;
 }
 .app .my-container .content .link-sec {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .app .my-container .content .link-sec img {
-  width: 48%;
+  width: 30%;
 }
 .app .my-container .content .link-sec img:nth-child(1) {
   margin-right: 15px;
@@ -357,13 +424,6 @@ header .main .image img {
   line-height: 115.7%;
   letter-spacing: 0px;
   color: #92009F;
-}
-.testimonial h1 {
-  font-size: 45px;
-  font-weight: bolder;
-  color: #141414;
-  line-height: 115.7%;
-  letter-spacing: 0px;
 }
 .testimonial p {
   color: #575757;
@@ -434,6 +494,9 @@ footer .my-container p {
 }
 
 @media screen and (max-width: 765px) {
+  header .main {
+    height: auto;
+  }
   header .main .content {
     width: 80%;
     margin: 30px auto;
@@ -497,11 +560,6 @@ footer .my-container p {
   margin: 0 auto;
   text-align: center;
 }
-.main .center h1 {
-  line-height: 115%;
-  font-size: 45px;
-  font-weight: 900;
-}
 .main .center p {
   font-size: 16px;
   color: #575757;
@@ -552,22 +610,18 @@ footer .my-container p {
 }
 .main .center .mylbtn {
   font-family: "Inter", sans-serif;
-  border: 2px solid #ED2AB6;
-  border-radius: 40px;
-  color: #fff;
-  background-color: #ED2AB6;
-  padding: 8px 25px;
-  transition: all 0.2s linear;
   text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
   margin: 15px 0;
-}
-.main .center .mylbtn:hover {
-  background-color: transparent;
-  border: 2px solid #fff;
-}
-.main .center .mylbtn:hover {
-  border: 2px solid #ED2AB6;
-  color: #ED2AB6;
+  padding: 10px 28px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-image: linear-gradient(95deg, rgb(237, 42, 182) 0%, rgb(71, 0, 149) 100%);
+  margin: 15px 0;
 }
 
 .myfooter {
@@ -594,11 +648,6 @@ footer .my-container p {
   width: 50%;
   margin: 0 auto;
   text-align: center;
-}
-.smain .center h1 {
-  line-height: 115%;
-  font-size: 45px;
-  font-weight: 900;
 }
 .smain .center p {
   font-size: 16px;
@@ -650,22 +699,18 @@ footer .my-container p {
 }
 .smain .center .mylbtn {
   font-family: "Inter", sans-serif;
-  border: 2px solid #ED2AB6;
-  border-radius: 40px;
-  color: #fff;
-  background-color: #ED2AB6;
-  padding: 8px 25px;
-  transition: all 0.2s linear;
   text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
   margin: 15px 0;
-}
-.smain .center .mylbtn:hover {
-  background-color: transparent;
-  border: 2px solid #fff;
-}
-.smain .center .mylbtn:hover {
-  border: 2px solid #ED2AB6;
-  color: #ED2AB6;
+  padding: 10px 28px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-image: linear-gradient(95deg, rgb(237, 42, 182) 0%, rgb(71, 0, 149) 100%);
+  margin: 15px 0;
 }
 
 .myfooter {
@@ -689,11 +734,6 @@ footer .my-container p {
   margin: 0 auto;
   text-align: center;
 }
-.vmain .center h1 {
-  line-height: 115%;
-  font-size: 45px;
-  font-weight: 900;
-}
 .vmain .center p {
   font-size: 16px;
   color: #575757;
@@ -704,6 +744,7 @@ footer .my-container p {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   padding: 0;
 }
@@ -751,29 +792,21 @@ footer .my-container p {
 }
 .vmain .center .mylbtn {
   font-family: "Inter", sans-serif;
-  border: 2px solid #ED2AB6;
-  border-radius: 40px;
-  color: #fff;
-  background-color: #ED2AB6;
-  padding: 8px 25px;
-  transition: all 0.2s linear;
   text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
   margin: 15px 0;
-}
-.vmain .center .mylbtn:hover {
-  background-color: transparent;
-  border: 2px solid #fff;
-}
-.vmain .center .mylbtn:hover {
-  border: 2px solid #ED2AB6;
-  color: #ED2AB6;
+  padding: 10px 28px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-image: linear-gradient(95deg, rgb(237, 42, 182) 0%, rgb(71, 0, 149) 100%);
+  margin: 15px 0;
 }
 
 @media screen and (max-width: 765px) {
-  .main {
-    height: auto;
-    margin: 50px auto;
-  }
   .main .center {
     width: 90%;
     padding: 35px;
@@ -794,13 +827,6 @@ footer .my-container p {
     padding: 35px;
   }
 }
-.products-sec h1 {
-  font-size: 35px;
-  line-height: 115.7%;
-  font-weight: 900;
-  color: #141414;
-  padding: 10px 0;
-}
 .products-sec .card-sec {
   width: 100%;
   margin: 10px 0;
@@ -811,7 +837,7 @@ footer .my-container p {
 .products-sec .card-sec .mycard {
   margin: 10px 0;
   background-color: #fff;
-  width: 22%;
+  width: 23.5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -871,26 +897,106 @@ footer .my-container p {
 .product-details .details {
   margin: 30px 0;
 }
-.product-details .details .dimage {
-  height: 420px;
+.product-details .details .dimage .carousel {
   display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  position: relative;
+  margin-bottom: 22px;
 }
-.product-details .details .dimage .first {
-  align-items: center;
-  width: 20%;
+.product-details .details .dimage .carousel .myinput {
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+}
+.product-details .details .dimage .carousel .myinput:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type {
+  margin-left: -300%;
+}
+.product-details .details .dimage .carousel .myinput:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type {
+  margin-left: -200%;
+}
+.product-details .details .dimage .carousel .myinput:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type {
+  margin-left: -100%;
+}
+.product-details .details .dimage .carousel .myinput:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type {
+  margin-left: 0%;
+}
+.product-details .details .dimage .carousel .carousel__slides {
+  position: relative;
+  width: 78%;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  display: flex;
+  list-style: none;
+}
+.product-details .details .dimage .carousel .carousel__slides .carousel__slide {
+  position: relative;
+  display: block;
+  flex: 1 0 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: all 300ms ease-out;
+  box-sizing: border-box;
+  white-space: normal;
+}
+.product-details .details .dimage .carousel .carousel__slides .carousel__slide figure {
+  display: flex;
+  margin: 0;
+}
+.product-details .details .dimage .carousel .carousel__slides .carousel__slide div {
+  width: 100%;
+}
+.product-details .details .dimage .carousel .carousel__slides .carousel__slide img {
+  width: 100%;
+  border-radius: 15%;
+}
+.product-details .details .dimage .carousel .carousel__slides .carousel__slide .credit {
+  margin-top: 1rem;
+  color: rgba(0, 0, 0, 0.5);
+  display: block;
+}
+.product-details .details .dimage .carousel .carousel__slides .carousel__slide.scrollable {
+  overflow-y: scroll;
+}
+.product-details .details .dimage .carousel .carousel__thumbnails {
+  width: 19%;
+  list-style: none;
+  margin: 0 -10px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
 }
-.product-details .details .dimage .first img {
-  width: 80%;
+.carousel__slides + .product-details .details .dimage .carousel .carousel__thumbnails {
+  margin-top: 20px;
 }
-.product-details .details .dimage .second {
-  width: 80%;
+.product-details .details .dimage .carousel .carousel__thumbnails li {
+  margin: 12px 10px;
+  transition: all 300ms ease-in-out;
 }
-.product-details .details .dimage .second img {
+.product-details .details .dimage .carousel .carousel__thumbnails label {
+  display: block;
+}
+.product-details .details .dimage .carousel .carousel__thumbnails label:hover, .product-details .details .dimage .carousel .carousel__thumbnails label:focus {
+  cursor: pointer;
+}
+.product-details .details .dimage .carousel .carousel__thumbnails label:hover img, .product-details .details .dimage .carousel .carousel__thumbnails label:focus img {
+  transition: all 300ms ease-in-out;
+}
+.product-details .details .dimage .carousel .carousel__thumbnails img {
+  display: block;
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .product-details .details .dtext h1 {
   color: #141414;
@@ -924,7 +1030,7 @@ footer .my-container p {
   border-radius: 40px;
   color: #ED2AB6;
   font-weight: bold;
-  padding: 8px 25px;
+  padding: 12px 25px;
   transition: all 0.2s linear;
   text-decoration: none;
   margin-right: 15px;
@@ -937,7 +1043,7 @@ footer .my-container p {
   color: #fff;
   cursor: pointer;
   margin: 15px 0;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -975,15 +1081,12 @@ footer .my-container p {
 }
 
 @media screen and (max-width: 992px) {
-  .product-details .details .dimage .first img {
-    width: 50%;
-  }
   .product-details .details .dtext {
     margin-top: 50px;
   }
 }
 .cart-section {
-  height: 90vh;
+  height: 100vh;
 }
 .cart-section h1 {
   font-size: 35px;
@@ -1127,7 +1230,7 @@ footer .my-container p {
   color: #fff;
   cursor: pointer;
   margin: 15px 0;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -1283,7 +1386,7 @@ footer .my-container p {
   color: #fff;
   cursor: pointer;
   margin: 15px 0;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -1312,7 +1415,7 @@ footer .my-container p {
   }
 }
 .order-section {
-  min-height: 90vh;
+  min-height: 100vh;
 }
 .order-section h1 {
   font-size: 30px;
@@ -1496,7 +1599,7 @@ footer .my-container p {
 }
 
 .family-section {
-  min-height: 90vh;
+  min-height: 100vh;
 }
 .family-section h1 {
   font-size: 30px;
@@ -1605,7 +1708,7 @@ footer .my-container p {
   color: #fff;
   cursor: pointer;
   margin: 15px 0;
-  padding: 8px 25px;
+  padding: 10px 28px;
   text-align: center;
   border: none;
   border-radius: 50px;
@@ -1617,7 +1720,7 @@ footer .my-container p {
 }
 
 .add-section {
-  min-height: 90vh;
+  min-height: 100vh;
 }
 .add-section h1 {
   font-size: 30px;
@@ -1707,25 +1810,21 @@ footer .my-container p {
 }
 .add-section .asection .profile .btn-div .mybtn {
   font-family: "Inter", sans-serif;
-  border: 2px solid #ED2AB6;
-  border-radius: 40px;
-  color: #fff;
-  background-color: #ED2AB6;
-  padding: 8px 25px;
-  transition: all 0.2s linear;
   text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  margin: 15px 0;
+  padding: 10px 28px;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s;
+  background-image: linear-gradient(95deg, rgb(237, 42, 182) 0%, rgb(71, 0, 149) 100%);
   padding: 15px 100px;
   display: block;
   width: 100%;
   text-align: center;
-}
-.add-section .asection .profile .btn-div .mybtn:hover {
-  background-color: transparent;
-  border: 2px solid #fff;
-}
-.add-section .asection .profile .btn-div .mybtn:hover {
-  color: #ED2AB6;
-  border: 2px solid #ED2AB6;
 }
 
 @media screen and (max-width: 430px) {

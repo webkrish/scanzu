@@ -43,7 +43,7 @@
                                 </svg>
                                 Cart</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item dropdown">
                             <a class="nav-link my-link" href="#">
                                 My Account
                                 <svg width="24" height="25" viewBox="0 0 24 25" fill="currentcolor"
@@ -54,6 +54,20 @@
                                 </svg>
 
                             </a>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="21" viewBox="0 0 16 21" fill="none">
+                                            <path d="M16 21H0V19C0 16.2386 2.23858 14 5 14H11C13.7614 14 16 16.2386 16 19V21ZM8 12C4.68629 12 2 9.3137 2 6C2 2.68629 4.68629 0 8 0C11.3137 0 14 2.68629 14 6C14 9.3137 11.3137 12 8 12Z" fill="#575757"/>
+                                            </svg> My Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="20" viewBox="0 0 16 20" fill="none">
+                                            <path d="M1 0H15C15.5523 0 16 0.44772 16 1V19C16 19.5523 15.5523 20 15 20H1C0.44772 20 0 19.5523 0 19V1C0 0.44772 0.44772 0 1 0ZM5 9V6L0 10L5 14V11H11V9H5Z" fill="#575757"/>
+                                            </svg> Log Out</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
                     </ul>
 
@@ -77,33 +91,25 @@
                                 <h4>Smart Doorbell</h4>
                                 <p>₹1200.00</p>
                                 <div class="count">
-                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33"
-                                            viewBox="0 0 33 33" fill="none">
-                                            <rect x="0.0446777" y="0.0447998" width="31.9701" height="31.9701"
-                                                rx="15.9851" fill="#541BD5" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M10.3209 16.6642H21.7388C22.0891 16.6642 22.3731 16.3802 22.3731 16.0298C22.3731 15.6795 22.0891 15.3955 21.7388 15.3955H10.3209C9.97052 15.3955 9.68652 15.6795 9.68652 16.0298C9.68652 16.3802 9.97052 16.6642 10.3209 16.6642Z"
-                                                fill="white" />
+                                    <a href="#"><svg id="decreaseButton" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                                        <rect x="0.0446777" y="0.0447998" width="31.9701" height="31.9701" rx="15.9851" fill="#541BD5"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3209 16.6642H21.7388C22.0891 16.6642 22.3731 16.3802 22.3731 16.0298C22.3731 15.6795 22.0891 15.3955 21.7388 15.3955H10.3209C9.97052 15.3955 9.68652 15.6795 9.68652 16.0298C9.68652 16.3802 9.97052 16.6642 10.3209 16.6642Z" fill="white"/>
                                         </svg></a>
-                                    <p>1</p>
-                                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="33" height="33"
-                                            viewBox="0 0 33 33" fill="none">
-                                            <rect x="0.985107" y="0.0447998" width="31.9701" height="31.9701"
-                                                rx="15.9851" fill="#541BD5" />
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                d="M16.3362 15.3955V10.3209C16.3362 9.97052 16.6202 9.68652 16.9705 9.68652C17.3208 9.68652 17.6048 9.97052 17.6048 10.3209V15.3955H22.6794C23.0298 15.3955 23.3138 15.6795 23.3138 16.0298C23.3138 16.3801 23.0298 16.6641 22.6794 16.6641H17.6048V21.7388C17.6048 22.0891 17.3208 22.3731 16.9705 22.3731C16.6202 22.3731 16.3362 22.0891 16.3362 21.7388V16.6641H11.2615C10.9112 16.6641 10.6272 16.3801 10.6272 16.0298C10.6272 15.6795 10.9112 15.3955 11.2615 15.3955H16.3362Z"
-                                                fill="white" />
+                                    <p id="numberDisplay">1</p>
+                                    <a href="#"><svg id="increaseButton" xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 33 33" fill="none">
+                                        <rect x="0.985107" y="0.0447998" width="31.9701" height="31.9701" rx="15.9851" fill="#541BD5"/>
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3362 15.3955V10.3209C16.3362 9.97052 16.6202 9.68652 16.9705 9.68652C17.3208 9.68652 17.6048 9.97052 17.6048 10.3209V15.3955H22.6794C23.0298 15.3955 23.3138 15.6795 23.3138 16.0298C23.3138 16.3801 23.0298 16.6641 22.6794 16.6641H17.6048V21.7388C17.6048 22.0891 17.3208 22.3731 16.9705 22.3731C16.6202 22.3731 16.3362 22.0891 16.3362 21.7388V16.6641H11.2615C10.9112 16.6641 10.6272 16.3801 10.6272 16.0298C10.6272 15.6795 10.9112 15.3955 11.2615 15.3955H16.3362Z" fill="white"/>
                                         </svg></a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="svg">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
+                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none">
                                 <path
                                     d="M15.7085 2.16671H20.9168V4.25004H18.8335V19.875C18.8335 20.4504 18.3671 20.9167 17.7918 20.9167H3.2085C2.6332 20.9167 2.16683 20.4504 2.16683 19.875V4.25004H0.0834961V2.16671H5.29183V0.083374H15.7085V2.16671ZM7.37516 7.37504V15.7084H9.4585V7.37504H7.37516ZM11.5418 7.37504V15.7084H13.6252V7.37504H11.5418Z"
                                     fill="#F11919" />
-                            </svg>
+                            </svg></a>
                         </div>
                     </div>
                     
@@ -205,6 +211,31 @@
     </footer>
 
     <script defer src="js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+    var numberDisplay = document.getElementById("numberDisplay");
+    var increaseButton = document.getElementById("increaseButton");
+    var decreaseButton = document.getElementById("decreaseButton");
+
+    var number = 0;
+
+    function updateNumberDisplay() {
+        numberDisplay.textContent = number;
+    }
+
+    increaseButton.addEventListener("click", function() {
+        number++;
+        updateNumberDisplay();
+    });
+
+    decreaseButton.addEventListener("click", function() {
+        if (number > 1) {
+            number--;
+            updateNumberDisplay();
+        }
+    });
+});
+    </script>
 </body>
 
 </html>

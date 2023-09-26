@@ -9,35 +9,22 @@
 
 @mixin btn1 {
     font-family: 'Inter', sans-serif;
-    border: 2px solid #fff;
+    box-shadow: inset 0px 0px 0px 1px #fff;
     border-radius: 40px;
     color: #fff;
     background-color: transparent;
-    padding: 8px 25px;
+    padding: 10px 28px;
     text-decoration: none;
     transition: all .2s linear;
+    margin-right: 15px;
 
     &:hover {
         background-color: #ED2AB6;
-        border: 2px solid #ED2AB6;
+        box-shadow: inset 0px 0px 0px 1px #ED2AB6;
     }
 }
 
-@mixin btn2 {
-    font-family: 'Inter', sans-serif;
-    border: 2px solid #ED2AB6;
-    border-radius: 40px;
-    color: #fff;
-    background-color: #ED2AB6;
-    padding: 8px 25px;
-    transition: all .2s linear;
-    text-decoration: none;
 
-    &:hover {
-        background-color: transparent;
-        border: 2px solid #fff;
-    }
-}
 
 @mixin gbtn {
     font-family: 'Inter', sans-serif;
@@ -46,7 +33,7 @@
     color: #fff;
     cursor: pointer;
     margin: 15px 0;
-    padding: 8px 25px;
+    padding: 10px 28px;
     text-align: center;
     border: none;
     border-radius: 50px;
@@ -55,9 +42,37 @@
 
 }
 
+.my-header {
+    width: 100%;
+    height: 100vh;
+}
+
+.big-heading {
+    
+    color: #141414;
+    letter-spacing: 0;
+    line-height: 115.7%;
+    font-weight: bolder;
+    font-size: 45px;
+}
+@media screen and (max-width:750px) {
+    .big-heading{
+        font-size: 25px;
+    }
+}
+
 .my-container {
     max-width: 1202px !important;
     margin: 0 auto;
+}
+
+.content {
+    padding-bottom: 30px;
+}
+
+
+.bottom {
+    padding-bottom: 25px
 }
 
 // header section started
@@ -70,16 +85,23 @@
 }
 
 header {
-    background-image: url(../img/BG.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+    .bgvideo {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        z-index: -1;
+    }
 
     // navigation section started
     nav {
         width: 100%;
         z-index: 999;
         transition: all .3s;
+        padding: 0 !important;
 
         .my-logo {
             width: 20%;
@@ -89,7 +111,7 @@ header {
             font-weight: 600;
             color: #fff !important;
             transition: all .2s;
-            padding: 0 12px !important;
+            padding: 13px 12px !important;
 
             &:hover {
                 color: #ED2AB6 !important;
@@ -110,17 +132,51 @@ header {
 
             .mybtn1 {
                 margin-left: 15px;
-                @include btn2;
+                @include gbtn;
+            }
+        }
+        .dropdown{
+            position: relative;
+            transition: all .3s;
+            &:hover{
+                transition: all .3s;
+                .dropdown-content{
+                    display: block;
+                }
+            }
+            .dropdown-content{
+                width: 100%;
+                display: none;
+                top: 52px;
+                position: absolute;
+                background-color: #fff;
+                border-radius: 0 0 10px 10px;
+                // padding: 15px;
+                // border: 1px solid red;
+                box-shadow: -1px 2px 7px 0px #00000045;
+                ul{
+                    margin-left: 8px;
+                    li{
+                        list-style: none;
+                        padding: 8px;
+                        a{
+                            text-decoration: none;
+                            color: #575757;
+                        }
+                    }
+                }
             }
         }
     }
+
 
     // navigation section ended
 
     // hero section started
     .main {
-        // height: 100vh;
-        padding-top: 180px;
+        height: 100vh;
+        // padding-top: 180px;
+        // height: 90vh;
         padding-bottom: 50px;
         align-items: center;
 
@@ -128,21 +184,19 @@ header {
             width: 50%;
             color: #fff;
 
-            h1 {
-                letter-spacing: 0;
-                line-height: 115.7%;
-                font-weight: bolder;
-                font-size: 45px;
-            }
 
+            h1{
+                color: #fff;
+            }
             p {
                 line-height: 182%;
                 letter-spacing: 0px;
-                font-size: 16px
+                font-size: 16px;
+                padding-bottom: 45px
             }
 
             .mybtn1 {
-                @include btn2;
+                @include gbtn;
                 margin-top: 35px;
             }
         }
@@ -156,7 +210,65 @@ header {
         }
     }
 
+
     // hero section ended
+}
+
+@media(min-aspect-ratio: 16/9) {
+    header {
+        .bgvideo {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+@media(max-aspect-ratio: 16/9) {
+    header {
+        .bgvideo {
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+@media screen and (max-width:990px) {
+    header {
+        nav {
+            .my-navbar {
+                text-align: center;
+                .anav{
+                    height: 100vh;
+                    .dropdown{
+                        .dropdown-content{
+                            top: 66px;
+                            height: 132px;
+                        }
+                    }
+                }
+                ul {
+                    margin-top: 25px;
+                    height: 40vh;
+
+                    li {
+                        padding: 15px 0;
+                    }
+                }
+
+                .mybtn {
+                    display: block;
+                    margin: 0;
+                }
+
+                .mybtn1 {
+                    display: block;
+                    margin: 0;
+                    margin-top: 15px;
+                    margin-bottom: 225px;
+                }
+            }
+        }
+    }
 }
 
 // header section ended
@@ -167,6 +279,8 @@ header {
     align-items: center;
 
     .content {
+        padding-bottom: 20px;
+
         h4 {
             font-size: 21px;
             font-weight: 500;
@@ -175,21 +289,15 @@ header {
             color: #92009F;
         }
 
-        h1 {
-            font-size: 45px;
-            font-weight: bolder;
-            color: #141414;
-            line-height: 115.7%;
-            letter-spacing: 0px;
-        }
-
         p {
             color: #575757;
             font-weight: 400;
             line-height: 182%;
             letter-spacing: 0px;
             font-size: 16px;
+
         }
+
 
         .my-gbtn {
             @include gbtn;
@@ -219,13 +327,7 @@ header {
             color: #92009F;
         }
 
-        h1 {
-            font-size: 45px;
-            font-weight: bolder;
-            color: #141414;
-            line-height: 115.7%;
-            letter-spacing: 0px;
-        }
+        
 
         p {
             color: #575757;
@@ -270,13 +372,7 @@ header {
             color: #92009F;
         }
 
-        h1 {
-            font-size: 45px;
-            font-weight: bolder;
-            color: #141414;
-            line-height: 115.7%;
-            letter-spacing: 0px;
-        }
+        
 
         p {
             color: #575757;
@@ -308,13 +404,7 @@ header {
             color: #92009F;
         }
 
-        h1 {
-            font-size: 45px;
-            font-weight: bolder;
-            color: #141414;
-            line-height: 115.7%;
-            letter-spacing: 0px;
-        }
+       
 
         p {
             color: #575757;
@@ -351,13 +441,8 @@ header {
         color: #92009F;
     }
 
-    h1 {
+    h1{
         text-align: center;
-        font-size: 45px;
-        font-weight: bolder;
-        color: #141414;
-        line-height: 115.7%;
-        letter-spacing: 0px;
     }
 
     p {
@@ -388,18 +473,14 @@ header {
         .content {
             h1 {
                 color: #fff;
-                padding-bottom: 15px;
-                font-size: 40px;
-                font-weight: bolder;
-                line-height: 115.7%;
             }
 
             .link-sec {
                 display: flex;
-                justify-content: space-between;
+                justify-content: flex-start;
 
                 img {
-                    width: 48%;
+                    width: 30%;
 
                     &:nth-child(1) {
                         margin-right: 15px;
@@ -428,13 +509,6 @@ header {
         color: #92009F;
     }
 
-    h1 {
-        font-size: 45px;
-        font-weight: bolder;
-        color: #141414;
-        line-height: 115.7%;
-        letter-spacing: 0px;
-    }
 
     p {
         color: #575757;
@@ -527,6 +601,8 @@ footer {
 @media screen and (max-width:765px) {
     header {
         .main {
+            height: auto;
+
             .content {
                 width: 80%;
                 margin: 30px auto;
@@ -625,11 +701,7 @@ footer {
         margin: 0 auto;
         text-align: center;
 
-        h1 {
-            line-height: 115%;
-            font-size: 45px;
-            font-weight: 900;
-        }
+       
 
         p {
             font-size: 16px;
@@ -684,13 +756,10 @@ footer {
         }
 
         .mylbtn {
-            @include btn2;
+            @include gbtn;
             margin: 15px 0;
 
-            &:hover {
-                border: 2px solid #ED2AB6;
-                color: #ED2AB6;
-            }
+            
         }
     }
 }
@@ -727,11 +796,7 @@ footer {
         margin: 0 auto;
         text-align: center;
 
-        h1 {
-            line-height: 115%;
-            font-size: 45px;
-            font-weight: 900;
-        }
+        
 
         p {
             font-size: 16px;
@@ -786,13 +851,10 @@ footer {
         }
 
         .mylbtn {
-            @include btn2;
+            @include gbtn;
             margin: 15px 0;
 
-            &:hover {
-                border: 2px solid #ED2AB6;
-                color: #ED2AB6;
-            }
+            
         }
     }
 }
@@ -829,11 +891,7 @@ footer {
         margin: 0 auto;
         text-align: center;
 
-        h1 {
-            line-height: 115%;
-            font-size: 45px;
-            font-weight: 900;
-        }
+        
 
         p {
             font-size: 16px;
@@ -846,6 +904,7 @@ footer {
             position: relative;
             display: flex;
             justify-content: flex-end;
+            justify-content: center;
             align-items: center;
             padding: 0;
 
@@ -896,13 +955,9 @@ footer {
         }
 
         .mylbtn {
-            @include btn2;
+            @include gbtn;
             margin: 15px 0;
 
-            &:hover {
-                border: 2px solid #ED2AB6;
-                color: #ED2AB6;
-            }
         }
     }
 }
@@ -913,8 +968,6 @@ footer {
 
 @media screen and (max-width:765px) {
     .main {
-        height: auto;
-        margin: 50px auto;
 
         .center {
             width: 90%;
@@ -948,13 +1001,7 @@ footer {
 // ---------------------------------  Products Section started --------------------------------
 
 .products-sec {
-    h1 {
-        font-size: 35px;
-        line-height: 115.7%;
-        font-weight: 900;
-        color: #141414;
-        padding: 10px 0;
-    }
+    
 
     .card-sec {
         width: 100%;
@@ -966,7 +1013,7 @@ footer {
         .mycard {
             margin: 10px 0;
             background-color: #fff;
-            width: 22%;
+            width: 23.5%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -1061,30 +1108,138 @@ footer {
         margin: 30px 0;
 
         .dimage {
-
-            height: 420px;
-            display: flex;
-
-            .first {
-                align-items: center;
-                width: 20%;
+            .carousel {
                 display: flex;
-                flex-direction: column;
                 justify-content: space-between;
+                flex-direction: row-reverse;
+                position: relative;
+                margin-bottom: 22px;
 
-                img {
-                    width: 80%;
+                .myinput {
+                    // clip: rect(1px, 1px, 1px, 1px);
+                    clip-path: inset(50%);
+                    height: 1px;
+                    width: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+
+                    &:nth-of-type(4):checked~.carousel__slides .carousel__slide:first-of-type {
+                        margin-left: -300%;
+                    }
+
+                    &:nth-of-type(3):checked~.carousel__slides .carousel__slide:first-of-type {
+                        margin-left: -200%;
+                    }
+
+                    &:nth-of-type(2):checked~.carousel__slides .carousel__slide:first-of-type {
+                        margin-left: -100%;
+                    }
+
+                    &:nth-of-type(1):checked~.carousel__slides .carousel__slide:first-of-type {
+                        margin-left: 0%;
+                    }
+
+                    // &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5);  border-radius: 15px;}
+                    // &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5);  border-radius: 15px;}
+                    // &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); border-radius: 15px;}
+                    // &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); border-radius: 15px;}
                 }
-            }
 
-            .second {
-                width: 80%;
+                .carousel__slides {
+                    position: relative;
+                    width: 78%;
+                    z-index: 1;
+                    padding: 0;
+                    margin: 0;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    box-sizing: border-box;
+                    display: flex;
+                    list-style: none;
 
-                img {
-                    width: 100%;
+                    .carousel__slide {
+                        position: relative;
+                        display: block;
+                        flex: 1 0 100%;
+                        width: 100%;
+                        overflow: hidden;
+                        transition: all 300ms ease-out;
+                        box-sizing: border-box;
+                        white-space: normal;
+
+                        figure {
+                            display: flex;
+                            margin: 0;
+                        }
+
+                        div {
+                            // @include aspect-ratio(3, 2);
+                            width: 100%;
+                        }
+
+                        img {
+                            width: 100%;
+                            border-radius: 15%;
+                        }
+
+                        .credit {
+                            margin-top: 1rem;
+                            color: rgba(0, 0, 0, 0.5);
+                            display: block;
+                        }
+
+                        &.scrollable {
+                            overflow-y: scroll;
+                        }
+                    }
+
+                }
+
+                .carousel__thumbnails {
+                    width: 19%;
+                    list-style: none;
+                    margin: 0 -10px;
+                    display: flex;
+                    flex-direction: column;
                     height: 100%;
+
+                    .carousel__slides+& {
+                        margin-top: 20px;
+                    }
+
+                    li {
+                        // flex: 1 1 auto;
+                        margin: 12px 10px;
+                        transition: all 300ms ease-in-out;
+                    }
+
+                    label {
+                        display: block;
+                        // @include aspect-ratio(1,1);
+
+
+                        &:hover,
+                        &:focus {
+                            cursor: pointer;
+
+                            img {
+                                // box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                                transition: all 300ms ease-in-out;
+                            }
+                        }
+                    }
+
+                    img {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
+
         }
 
         .dtext {
@@ -1126,7 +1281,7 @@ footer {
                 border-radius: 40px;
                 color: #ED2AB6;
                 font-weight: bold;
-                padding: 8px 25px;
+                padding: 12px 25px;
                 transition: all .2s linear;
                 text-decoration: none;
                 margin-right: 15px;
@@ -1182,13 +1337,7 @@ footer {
 @media screen and (max-width: 992px) {
     .product-details {
         .details {
-            .dimage {
-                .first {
-                    img {
-                        width: 50%;
-                    }
-                }
-            }
+            .dimage {}
 
             .dtext {
                 margin-top: 50px;
@@ -1203,7 +1352,7 @@ footer {
 // =====================cart section started =============================
 
 .cart-section {
-    height: 90vh;
+    height: 100vh;
 
     h1 {
         font-size: 35px;
@@ -1615,7 +1764,7 @@ footer {
 // ============================ Order Section =============================
 
 .order-section {
-    min-height: 90vh;
+    min-height: 100vh;
 
     h1 {
         font-size: 30px;
@@ -1855,7 +2004,7 @@ footer {
 
 
 .family-section {
-    min-height: 90vh;
+    min-height: 100vh;
 
     h1 {
         font-size: 30px;
@@ -1953,11 +2102,13 @@ footer {
                             font-weight: 600;
                             color: #141414;
                         }
-                        p{
+
+                        p {
                             color: #7E00BA;
                             margin: 0;
                             margin-right: 15px;
-                            span{
+
+                            span {
                                 font-weight: 600;
                             }
                         }
@@ -1974,6 +2125,7 @@ footer {
                     text-align: center;
                 }
             }
+
             .btn-div {
                 margin: 55px 0;
 
@@ -1995,7 +2147,7 @@ footer {
 
 // ============================ add Member section =========================
 .add-section {
-    min-height: 90vh;
+    min-height: 100vh;
 
     h1 {
         font-size: 30px;
@@ -2053,6 +2205,7 @@ footer {
 
         .profile {
             padding-left: 15px;
+
             h4 {
                 font-size: 23px;
                 font-weight: 700;
@@ -2066,7 +2219,7 @@ footer {
                 align-items: center;
                 margin-bottom: 25px;
                 padding: 0;
-    
+
                 input {
                     width: 100%;
                     background-color: #F5F2F6;
@@ -2074,36 +2227,35 @@ footer {
                     border: none;
                     padding: 15px;
                     color: #5C3967;
-    
+
                     &::placeholder {
                         color: #5C3967;
                         font-size: 15px;
                     }
-    
+
                     &:focus-visible {
                         outline: none;
                     }
                 }
-    
+
                 img {
                     position: absolute;
                     padding-right: 15px;
                     width: 33px;
                 }
             }
+
             .btn-div {
                 margin: 55px 0;
 
                 .mybtn {
-                    @include btn2;
+                    @include gbtn;
                     padding: 15px 100px;
                     display: block;
                     width: 100%;
                     text-align: center;
-                    &:hover{
-                        color: #ED2AB6;
-                        border: 2px solid #ED2AB6;
-                    }
+
+                    
                 }
             }
 
@@ -2112,11 +2264,11 @@ footer {
 }
 
 @media screen and (max-width: 430px) {
-    .add-section{
-        .asection{
-            .profile{
-                .btn-div{
-                    .mybtn{
+    .add-section {
+        .asection {
+            .profile {
+                .btn-div {
+                    .mybtn {
                         padding: 15px 15px;
                     }
                 }
@@ -2124,4 +2276,5 @@ footer {
         }
     }
 }
+
 // ============================ add Member section =========================
