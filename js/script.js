@@ -7,7 +7,6 @@ window.onscroll = function () {
     }
 };
 
-
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 30,
@@ -16,7 +15,7 @@ var swiper = new Swiper(".mySwiper", {
     grabCursor: true,
     pagination: {
         el: ".swiper-pagination",
-        clickable: true
+        clickable: true,
     },
     breakpoints: {
         0: {
@@ -30,5 +29,6 @@ var swiper = new Swiper(".mySwiper", {
         },
     }
 });
+
 
 
