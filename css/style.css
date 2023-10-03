@@ -1397,7 +1397,7 @@ footer .my-container p {
 }
 @media screen and (max-width: 770px) {
   .account-section {
-    height: 100vh;
+    height: auto;
     margin: 30px 0;
   }
   .account-section .asection .profile .info .btn-div .gbtn {
