@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Account </title>
+    <title>My-account </title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse my-navbar" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto anav mb-2 mb-lg-0">
+                    <ul class="navbar-nav anav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link my-link" aria-current="page" href="#">Order QR</a>
                         </li>
@@ -57,13 +57,19 @@
                             <div class="dropdown-content">
                                 <ul>
                                     <li>
-                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 21" fill="none">
-                                            <path d="M16 21H0V19C0 16.2386 2.23858 14 5 14H11C13.7614 14 16 16.2386 16 19V21ZM8 12C4.68629 12 2 9.3137 2 6C2 2.68629 4.68629 0 8 0C11.3137 0 14 2.68629 14 6C14 9.3137 11.3137 12 8 12Z" fill="#575757"/>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18"
+                                                viewBox="0 0 16 21" fill="none">
+                                                <path
+                                                    d="M16 21H0V19C0 16.2386 2.23858 14 5 14H11C13.7614 14 16 16.2386 16 19V21ZM8 12C4.68629 12 2 9.3137 2 6C2 2.68629 4.68629 0 8 0C11.3137 0 14 2.68629 14 6C14 9.3137 11.3137 12 8 12Z"
+                                                    fill="#575757" />
                                             </svg> My Account</a>
                                     </li>
                                     <li>
-                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18" viewBox="0 0 16 20" fill="none">
-                                            <path d="M1 0H15C15.5523 0 16 0.44772 16 1V19C16 19.5523 15.5523 20 15 20H1C0.44772 20 0 19.5523 0 19V1C0 0.44772 0.44772 0 1 0ZM5 9V6L0 10L5 14V11H11V9H5Z" fill="#575757"/>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18"
+                                                viewBox="0 0 16 20" fill="none">
+                                                <path
+                                                    d="M1 0H15C15.5523 0 16 0.44772 16 1V19C16 19.5523 15.5523 20 15 20H1C0.44772 20 0 19.5523 0 19V1C0 0.44772 0.44772 0 1 0ZM5 9V6L0 10L5 14V11H11V9H5Z"
+                                                    fill="#575757" />
                                             </svg> Log Out</a>
                                     </li>
                                 </ul>
@@ -82,32 +88,274 @@
             <h1>My Account</h1>
             <div class="row asection">
                 <div class="account col-lg-3 col-md-6 col-sm-12">
-                    <ul>
+                    <!-- <ul>
                         <li><a href="#">My Account</a></li>
                         <li><a href="#">My Order</a></li>
                         <li><a href="#">Family Members</a></li>
                         <li><a href="#">Change Password</a></li>
-                    </ul>
+                    </ul> -->
+                    <div class=" my-tab align-items-start">
+                        <div class="nav flex-column nav-pills mynav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link my-tab-btn active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                                aria-selected="true">My Account</button>
+                            <button class="nav-link my-tab-btn" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-profile" type="button" role="tab"
+                                aria-controls="v-pills-profile" aria-selected="false">My Orders</button>
+                            <button class="nav-link my-tab-btn" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-messages" type="button" role="tab"
+                                aria-controls="v-pills-messages" aria-selected="false">My Profile</button>
+                            <button class="nav-link my-tab-btn" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-settings" type="button" role="tab"
+                                aria-controls="v-pills-settings" aria-selected="false">Change Password</button>
+                            <button class="nav-link my-tab-btn" id="v-pills-friends-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-friends" type="button" role="tab"
+                                aria-controls="v-pills-friends" aria-selected="false">Tell a Friend</button>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="profile col-lg-8 col-md-6 col-sm-12">
-                    <h4>Profile Details</h4>
-                    <div class="info">
-                        <div class="first">
-                            <p>Full Name</p>
-                            <h6>Jack Thomson</h6>
+                <div class="profile col-lg-6 col-md-6 col-sm-12 tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane my-tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                        aria-labelledby="v-pills-home-tab">
+                        <h4>Profile Details</h4>
+                        <div class="info">
+                            <div class="first">
+                                <p>Full Name</p>
+                                <h6>Jack Thomson</h6>
+                            </div>
+                            <div class="first">
+                                <p>Phone Number</p>
+                                <h6>+91 98989 98989</h6>
+                            </div>
+                            <div class="first">
+                                <p>Email Address</p>
+                                <h6>jack.thomson@gmail.com</h6>
+                            </div>
+                            <div class="btn-div">
+                                <a class="gbtn" href="#">Edit Profile
+                                    <svg width="23" height="18" viewBox="0 0 23 18" fill="currentcolor"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M14.5228 17.4789C14.2865 17.4789 14.0502 17.3919 13.8637 17.2054C13.5031 16.8448 13.5031 16.2479 13.8637 15.8873L20.7526 8.99846L13.8637 2.10965C13.5031 1.74905 13.5031 1.15218 13.8637 0.791573C14.2243 0.430966 14.8212 0.430966 15.1818 0.791573L22.7297 8.33942C23.0903 8.70003 23.0903 9.2969 22.7297 9.6575L15.1818 17.2054C14.9953 17.3919 14.759 17.4789 14.5228 17.4789Z"
+                                            fill="currentcolor" />
+                                        <path
+                                            d="M21.8602 9.93088H0.932604C0.42278 9.93088 0 9.5081 0 8.99828C0 8.48845 0.42278 8.06567 0.932604 8.06567H21.8602C22.3701 8.06567 22.7928 8.48845 22.7928 8.99828C22.7928 9.5081 22.3701 9.93088 21.8602 9.93088Z"
+                                            fill="currentcolor" />
+                                    </svg>
+                                </a>
+                            </div>
                         </div>
-                        <div class="first">
-                            <p>Phone Number</p>
-                            <h6>+91 98989 98989</h6>
+
+                    </div>
+                    <div class="tab-pane my-tab-pane fade" id="v-pills-profile" role="tabpanel"
+                        aria-labelledby="v-pills-profile-tab">
+                        <h4>My Order</h4>
+                        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active Toggle-btn" id="pills-home-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                    aria-selected="true">Processing Orders</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link Toggle-btn" id="pills-profile-tab" data-bs-toggle="pill"
+                                    data-bs-target="#pills-profile" type="button" role="tab"
+                                    aria-controls="pills-profile" aria-selected="false">Delivered Orders</button>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content my-tab" id="pills-tabContent">
+                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                aria-labelledby="pills-home-tab">
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="image">
+                                            <img src="img/product1.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="order-info">
+                                                <p>18-08-2023</p>
+                                                <p>Order No. 123654789</p>
+                                                <p class="Processing">Processing</p>
+                                            </div>
+                                            <h4>Smart Doorbell</h4>
+                                            <p>₹1200.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="image">
+                                            <img src="img/product4.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="order-info">
+                                                <p>18-08-2023</p>
+                                                <p>Order No. 123654789</p>
+                                                <p class="Processing">Processing</p>
+                                            </div>
+                                            <h4>Pet QR Tag</h4>
+                                            <p>₹1200.00</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="image">
+                                            <img src="img/product2.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="order-info">
+                                                <p>18-08-2023</p>
+                                                <p>Order No. 123654789</p>
+                                                <p class="Processing">Processing</p>
+                                            </div>
+                                            <h4>Vehicle QR Tag</h4>
+                                            <p>₹1200.00</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="image">
+                                            <img src="img/product3.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="order-info">
+                                                <p>18-08-2023</p>
+                                                <p>Order No. 123654789</p>
+                                                <p class="Processing">Processing</p>
+                                            </div>
+                                            <h4>Luggage QR Tag</h4>
+                                            <p>₹1200.00</p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane fade my-tab2" id="pills-profile" role="tabpanel"
+                                aria-labelledby="pills-profile-tab">
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="image">
+                                            <img src="img/product1.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="order-info">
+                                                <p>18-08-2023</p>
+                                                <p>Order No. 123654789</p>
+                                                <p class="Processing">Delivered</p>
+                                            </div>
+                                            <h4>Smart Doorbell</h4>
+                                            <p>₹1200.00</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="image">
+                                            <img src="img/product4.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="order-info">
+                                                <p>18-08-2023</p>
+                                                <p>Order No. 123654789</p>
+                                                <p class="Processing">Delivered</p>
+                                            </div>
+                                            <h4>Pet QR Tag</h4>
+                                            <p>₹1200.00</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="image">
+                                            <img src="img/product2.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="order-info">
+                                                <p>18-08-2023</p>
+                                                <p>Order No. 123654789</p>
+                                                <p class="Processing">Delivered</p>
+                                            </div>
+                                            <h4>Vehicle QR Tag</h4>
+                                            <p>₹1200.00</p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="content">
+                                        <div class="image">
+                                            <img src="img/product3.png" alt="">
+                                        </div>
+                                        <div class="text">
+                                            <div class="order-info">
+                                                <p>18-08-2023</p>
+                                                <p>Order No. 123654789</p>
+                                                <p class="Processing">Delivered</p>
+                                            </div>
+                                            <h4>Luggage QR Tag</h4>
+                                            <p>₹1200.00</p>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
-                        <div class="first">
-                            <p>Email Address</p>
-                            <h6>jack.thomson@gmail.com</h6>
+                    </div>
+                    <div class="tab-pane my-tab-pane fade" id="v-pills-messages" role="tabpanel"
+                        aria-labelledby="v-pills-messages-tab">
+                        <h4>Profile Details</h4>
+                        <div class="info">
+                            <div class="first">
+                                <p>Full Name</p>
+                                <div class="inputbox icon">
+                                    <input type="text" placeholder="Enter full name">
+                                </div>
+                            </div>
+                            <div class="first">
+                                <p>Phone Number</p>
+                                <div class="inputbox icon">
+                                    <input type="number" placeholder="Enter phone number">
+                                </div>
+                            </div>
+                            <div class="first">
+                                <p>Email Address</p>
+                                <h6>jack.thomson@gmail.com</h6>
+                            </div>
+                            <div class="btn-div">
+                                <a class="gbtn" href="#">Save
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane my-tab-pane fade" id="v-pills-settings" role="tabpanel"
+                        aria-labelledby="v-pills-settings-tab">
+                        <h4>Change Password</h4>
+                        <div class="inputbox icon">
+                            <input type="password" placeholder="Enter old password">
+                            <img src="img/icon.png" alt="">
+                        </div>
+                        <div class="inputbox icon">
+                            <input type="password" placeholder="Enter New password">
+                            <img src="img/icon.png" alt="">
+                        </div>
+                        <div class="inputbox icon">
+                            <input type="password" placeholder="Confirm password">
+                            <img src="img/icon.png" alt="">
                         </div>
                         <div class="btn-div">
-                            <a class="gbtn" href="#">Edit Profile
-                                <svg width="23" height="18" viewBox="0 0 23 18"
-                                    fill="currentcolor" xmlns="http://www.w3.org/2000/svg">
+                            <a class="mybtn" href="#">Add Family Member
+                                <svg width="23" height="18" viewBox="0 0 23 18" fill="currentcolor"
+                                    xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M14.5228 17.4789C14.2865 17.4789 14.0502 17.3919 13.8637 17.2054C13.5031 16.8448 13.5031 16.2479 13.8637 15.8873L20.7526 8.99846L13.8637 2.10965C13.5031 1.74905 13.5031 1.15218 13.8637 0.791573C14.2243 0.430966 14.8212 0.430966 15.1818 0.791573L22.7297 8.33942C23.0903 8.70003 23.0903 9.2969 22.7297 9.6575L15.1818 17.2054C14.9953 17.3919 14.759 17.4789 14.5228 17.4789Z"
                                         fill="currentcolor" />
@@ -118,12 +366,35 @@
                             </a>
                         </div>
                     </div>
+                    <div class="tab-pane my-tab-pane fade" id="v-pills-friends" role="tabpanel"
+                        aria-labelledby="v-pills-friends-tab">
+                        <h4>Tell a Friend</h4>
+                        <p class="my-p">Copy link & share it</p>
+                        <div class="inputbox icon input-btn">
+                            <input type="text" placeholder="Enter full name">
+                            <a href="#">Copy</a>
+                        </div>
+                        <p class="my-p">or share via</p>
+                        <div class="icon-box">
+                            <div class="my-i">
+                                <a href="#"><img src="img/Facebook.png" alt=""></a>
+                            </div>
+                            <div class="my-i">
+                                <a href="#"><img src="img/Instagram.png" alt=""></a>
+                            </div>
+                            <div class="my-i">
+                                <a href="#"><img src="img/LinkedIn.png" alt=""></a>
+                            </div>
+                            <div class="my-i">
+                                <a href="#"><img src="img/Whatsapp.png" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
-
-
     <footer>
         <div class="row my-container">
             <div class="social">

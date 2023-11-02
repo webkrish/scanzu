@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call & Chat History</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light sscrolled">
+            <div class="container-fluid my-container ">
+                <a class="navbar-brand my-logo" href="#"><img src="img/Logo.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse my-navbar" id="navbarSupportedContent">
+                    <ul class="navbar-nav anav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link my-link" aria-current="page" href="#">Order QR</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link my-link" href="#">How It Works</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link my-link" href="#">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="currentcolor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M3.00327 3.81247L0.571289 1.38049L1.63195 0.319828L4.06393 2.75181H15.4952C15.9095 2.75181 16.2452 3.08759 16.2452 3.50181C16.2452 3.5748 16.2346 3.6474 16.2137 3.71731L14.4137 9.71735C14.3185 10.0345 14.0264 10.2518 13.6952 10.2518H4.50327V11.7518H12.7533V13.2518H3.75327C3.33905 13.2518 3.00327 12.916 3.00327 12.5018V3.81247ZM4.12827 16.2518C3.50695 16.2518 3.00327 15.7481 3.00327 15.1268C3.00327 14.5055 3.50695 14.0018 4.12827 14.0018C4.74959 14.0018 5.25327 14.5055 5.25327 15.1268C5.25327 15.7481 4.74959 16.2518 4.12827 16.2518ZM13.1283 16.2518C12.5069 16.2518 12.0033 15.7481 12.0033 15.1268C12.0033 14.5055 12.5069 14.0018 13.1283 14.0018C13.7496 14.0018 14.2533 14.5055 14.2533 15.1268C14.2533 15.7481 13.7496 16.2518 13.1283 16.2518Z"
+                                        fill="currentcolor" />
+                                </svg>
+                                Cart</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link my-link" href="#">
+                                My Account
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="currentcolor"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.9997 13.6714L16.9495 8.72168L18.3637 10.1359L11.9997 16.4999L5.63574 10.1359L7.04996 8.72168L11.9997 13.6714Z"
+                                        fill="currentcolor" />
+                                </svg>
+
+                            </a>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18"
+                                                viewBox="0 0 16 21" fill="none">
+                                                <path
+                                                    d="M16 21H0V19C0 16.2386 2.23858 14 5 14H11C13.7614 14 16 16.2386 16 19V21ZM8 12C4.68629 12 2 9.3137 2 6C2 2.68629 4.68629 0 8 0C11.3137 0 14 2.68629 14 6C14 9.3137 11.3137 12 8 12Z"
+                                                    fill="#575757" />
+                                            </svg> My Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="18"
+                                                viewBox="0 0 16 20" fill="none">
+                                                <path
+                                                    d="M1 0H15C15.5523 0 16 0.44772 16 1V19C16 19.5523 15.5523 20 15 20H1C0.44772 20 0 19.5523 0 19V1C0 0.44772 0.44772 0 1 0ZM5 9V6L0 10L5 14V11H11V9H5Z"
+                                                    fill="#575757" />
+                                            </svg> Log Out</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- <a class="mybtn" href="login.html">Log In</a>
+                    <a class="mybtn1" href="signup.html">Sign Up</a> -->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="chistory-section">
+        <div class="container my-container">
+            <h1>My Account</h1>
+            <div class="row asection">
+                <div class="account col-lg-3 col-md-6 col-sm-12">
+                    <div class=" my-tab align-items-start">
+                        <div class="nav flex-column nav-pills mynav-pills" id="v-pills-tab" role="tablist"
+                            aria-orientation="vertical">
+                            <button class="nav-link my-tab-btn active" id="v-pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                                aria-selected="true">My Account</button>
+                            <button class="nav-link my-tab-btn" id="v-pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-profile" type="button" role="tab"
+                                aria-controls="v-pills-profile" aria-selected="false">My Orders</button>
+                            <button class="nav-link my-tab-btn" id="v-pills-messages-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-messages" type="button" role="tab"
+                                aria-controls="v-pills-messages" aria-selected="false">My Profile</button>
+                            <button class="nav-link my-tab-btn" id="v-pills-settings-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-settings" type="button" role="tab"
+                                aria-controls="v-pills-settings" aria-selected="false">Change Password</button>
+                            <button class="nav-link my-tab-btn" id="v-pills-friends-tab" data-bs-toggle="pill"
+                                data-bs-target="#v-pills-friends" type="button" role="tab"
+                                aria-controls="v-pills-friends" aria-selected="false">Tell a Friend</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="profile col-lg-7 col-md-7 col-sm-12 tab-content" id="v-pills-tabContent">
+                    <h4>Call & Chat History</h4>
+                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active Toggle-btn" id="pills-home-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                                aria-selected="true">Call History</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link Toggle-btn" id="pills-profile-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                                aria-selected="false">Chat History</button>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content my-tab" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                            aria-labelledby="pills-home-tab">
+                            <p>Apr 18, 2023</p>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="image">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M12.5009 18.9636L23.9914 7.47314L25.7591 9.24091L12.5009 22.4991L4.5459 14.5442L6.31366 12.7765L12.5009 18.9636Z" fill="#0054A1"/>
+                                          </svg>
+                                          
+                                    </div>
+                                    <div class="text">
+                                        <div class="order-info">
+                                            <h5>Unknown Visitor</h5>
+                                            <p><strong>Answered</strong>  10:32</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <path d="M14.667 3.6665C15.1733 3.6665 15.5837 4.07691 15.5837 4.58317V8.43317L20.3625 5.08799C20.5699 4.94282 20.8557 4.99326 21.0008 5.20064C21.0547 5.27767 21.0837 5.36943 21.0837 5.46347V16.5362C21.0837 16.7893 20.8784 16.9946 20.6253 16.9946C20.5313 16.9946 20.4395 16.9656 20.3625 16.9117L15.5837 13.5665V17.4165C15.5837 17.9228 15.1733 18.3332 14.667 18.3332H1.83366C1.3274 18.3332 0.916992 17.9228 0.916992 17.4165V4.58317C0.916992 4.07691 1.3274 3.6665 1.83366 3.6665H14.667ZM6.78366 8.09278C6.60647 8.09278 6.45864 8.21847 6.42445 8.38556L6.41699 8.45945V13.5402C6.41699 13.61 6.43688 13.6782 6.47432 13.7371C6.56944 13.8866 6.75486 13.9438 6.91417 13.8829L6.98051 13.8496L10.9726 11.3092C11.0178 11.2803 11.0562 11.2419 11.085 11.1967C11.1802 11.0472 11.1535 10.855 11.0309 10.7365L10.9726 10.6905L6.98051 8.1501C6.92168 8.11267 6.85339 8.09278 6.78366 8.09278Z" fill="#0054A1"/>
+                                          </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="image">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M23.7504 17.4999L23.7505 6.25004L21.2505 6.25L21.2504 14.9999L8.53556 15L13.4727 10.0628L11.705 8.29508L3.75 16.25L11.705 24.205L13.4727 22.4372L8.5355 17.5L23.7504 17.4999Z" fill="#0054A1"/>
+                                          </svg>
+                                          
+                                    </div>
+                                    <div class="text">
+                                        <div class="order-info">
+                                            <h5>Ralph Edwards</h5>
+                                            <p><strong>Missed</strong>  10:32</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <path d="M19.25 15.0517V18.2931C19.25 18.7743 18.8779 19.1736 18.398 19.2076C17.997 19.2359 17.6699 19.25 17.4167 19.25C9.31645 19.25 2.75 12.6836 2.75 4.58333C2.75 4.33007 2.76416 4.00296 2.79249 3.60204C2.82642 3.12206 3.22569 2.75 3.70687 2.75H6.94843C7.18372 2.75 7.38078 2.92822 7.4044 3.16232C7.42561 3.37248 7.44533 3.54121 7.46356 3.66852C7.64899 4.96349 8.02774 6.19608 8.56964 7.33611C8.65662 7.5191 8.5999 7.73812 8.43503 7.85589L6.45659 9.26915C7.66106 12.0827 9.91733 14.339 12.7309 15.5435L14.1415 13.5684C14.2608 13.4016 14.4824 13.3442 14.6676 13.4321C15.8075 13.9736 17.04 14.3519 18.3348 14.5369C18.4613 14.555 18.629 14.5745 18.8377 14.5956C19.0718 14.6193 19.25 14.8164 19.25 15.0517Z" fill="#0054A1"/>
+                                          </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>Apr 17, 2023</p>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="image">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M12.5009 18.9636L23.9914 7.47314L25.7591 9.24091L12.5009 22.4991L4.5459 14.5442L6.31366 12.7765L12.5009 18.9636Z" fill="#0054A1"/>
+                                          </svg>
+                                          
+                                    </div>
+                                    <div class="text">
+                                        <div class="order-info">
+                                            <h5>Unknown Visitor</h5>
+                                            <p><strong>Answered</strong>  10:32</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <path d="M14.667 3.6665C15.1733 3.6665 15.5837 4.07691 15.5837 4.58317V8.43317L20.3625 5.08799C20.5699 4.94282 20.8557 4.99326 21.0008 5.20064C21.0547 5.27767 21.0837 5.36943 21.0837 5.46347V16.5362C21.0837 16.7893 20.8784 16.9946 20.6253 16.9946C20.5313 16.9946 20.4395 16.9656 20.3625 16.9117L15.5837 13.5665V17.4165C15.5837 17.9228 15.1733 18.3332 14.667 18.3332H1.83366C1.3274 18.3332 0.916992 17.9228 0.916992 17.4165V4.58317C0.916992 4.07691 1.3274 3.6665 1.83366 3.6665H14.667ZM6.78366 8.09278C6.60647 8.09278 6.45864 8.21847 6.42445 8.38556L6.41699 8.45945V13.5402C6.41699 13.61 6.43688 13.6782 6.47432 13.7371C6.56944 13.8866 6.75486 13.9438 6.91417 13.8829L6.98051 13.8496L10.9726 11.3092C11.0178 11.2803 11.0562 11.2419 11.085 11.1967C11.1802 11.0472 11.1535 10.855 11.0309 10.7365L10.9726 10.6905L6.98051 8.1501C6.92168 8.11267 6.85339 8.09278 6.78366 8.09278Z" fill="#0054A1"/>
+                                          </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="image">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M23.7504 17.4999L23.7505 6.25004L21.2505 6.25L21.2504 14.9999L8.53556 15L13.4727 10.0628L11.705 8.29508L3.75 16.25L11.705 24.205L13.4727 22.4372L8.5355 17.5L23.7504 17.4999Z" fill="#0054A1"/>
+                                          </svg>
+                                          
+                                    </div>
+                                    <div class="text">
+                                        <div class="order-info">
+                                            <h5>Ralph Edwards</h5>
+                                            <p><strong>Missed</strong>  10:32</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <path d="M19.25 15.0517V18.2931C19.25 18.7743 18.8779 19.1736 18.398 19.2076C17.997 19.2359 17.6699 19.25 17.4167 19.25C9.31645 19.25 2.75 12.6836 2.75 4.58333C2.75 4.33007 2.76416 4.00296 2.79249 3.60204C2.82642 3.12206 3.22569 2.75 3.70687 2.75H6.94843C7.18372 2.75 7.38078 2.92822 7.4044 3.16232C7.42561 3.37248 7.44533 3.54121 7.46356 3.66852C7.64899 4.96349 8.02774 6.19608 8.56964 7.33611C8.65662 7.5191 8.5999 7.73812 8.43503 7.85589L6.45659 9.26915C7.66106 12.0827 9.91733 14.339 12.7309 15.5435L14.1415 13.5684C14.2608 13.4016 14.4824 13.3442 14.6676 13.4321C15.8075 13.9736 17.04 14.3519 18.3348 14.5369C18.4613 14.555 18.629 14.5745 18.8377 14.5956C19.0718 14.6193 19.25 14.8164 19.25 15.0517Z" fill="#0054A1"/>
+                                          </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="content">
+                                    <div class="image">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M23.7504 17.4999L23.7505 6.25004L21.2505 6.25L21.2504 14.9999L8.53556 15L13.4727 10.0628L11.705 8.29508L3.75 16.25L11.705 24.205L13.4727 22.4372L8.5355 17.5L23.7504 17.4999Z" fill="#0054A1"/>
+                                          </svg>
+                                          
+                                    </div>
+                                    <div class="text">
+                                        <div class="order-info">
+                                            <h5>Ralph Edwards</h5>
+                                            <p><strong>Missed</strong>  10:32</p>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                                            <path d="M19.25 15.0517V18.2931C19.25 18.7743 18.8779 19.1736 18.398 19.2076C17.997 19.2359 17.6699 19.25 17.4167 19.25C9.31645 19.25 2.75 12.6836 2.75 4.58333C2.75 4.33007 2.76416 4.00296 2.79249 3.60204C2.82642 3.12206 3.22569 2.75 3.70687 2.75H6.94843C7.18372 2.75 7.38078 2.92822 7.4044 3.16232C7.42561 3.37248 7.44533 3.54121 7.46356 3.66852C7.64899 4.96349 8.02774 6.19608 8.56964 7.33611C8.65662 7.5191 8.5999 7.73812 8.43503 7.85589L6.45659 9.26915C7.66106 12.0827 9.91733 14.339 12.7309 15.5435L14.1415 13.5684C14.2608 13.4016 14.4824 13.3442 14.6676 13.4321C15.8075 13.9736 17.04 14.3519 18.3348 14.5369C18.4613 14.555 18.629 14.5745 18.8377 14.5956C19.0718 14.6193 19.25 14.8164 19.25 15.0517Z" fill="#0054A1"/>
+                                          </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="tab-pane fade my-tab2" id="pills-profile" role="tabpanel"
+                            aria-labelledby="pills-profile-tab">
+                            <div class="chat-content">
+                                <div class="chat-head">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                        <path d="M9.78554 13.7501H25V16.2501H9.78554L16.4905 22.955L14.7227 24.7227L5 15.0001L14.7227 5.27734L16.4905 7.04511L9.78554 13.7501Z" fill="#0054A1"/>
+                                      </svg>
+                                          <div class="image">
+                                            <h4>CH</h4>
+                                          </div>
+                                        <h5>Courtney Henry</h5>
+                                </div>
+                                <div class="chat-body">
+                                    <div class="first-massage">
+                                        <h6>Courtney Henry</h6>
+                                        <p>10:32</p> <br>
+                                        <p class="massage">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div class="second-massage">
+                                        <p>10:32</p>
+                                        <h6>You</h6> <br>
+                                        <p class="massage">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                    <div class="first-massage">
+                                        <h6>Courtney Henry</h6>
+                                        <p>10:32</p><br>
+                                        <p class="massage">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="row my-container">
+            <div class="social">
+                <a href="#"><img src="img/Facebook - Negative.png" alt=""></a>
+                <a href="#"><img src="img/Instagram - Negative.png" alt=""></a>
+                <a href="#"><img src="img/LinkedIn - Negative.png" alt=""></a>
+                <a href="#">About</a>
+                <a href="#">contact</a>
+            </div>
+            <div class="flogo">
+                <img src="img/Logo Color.png" alt="">
+            </div>
+            <p>Copyright © 2023 Scanzu All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script defer src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
