@@ -668,13 +668,15 @@ header {
 footer {
     background-color: rgb(240, 240, 240);
     padding: 10px 0;
-    .f-footer{
+
+    .f-footer {
         display: flex;
         justify-content: space-between;
         align-items: start !important;
         padding: 40PX 20px;
         flex-direction: row !important;
-        p{
+
+        p {
             width: 100% !important;
             color: #232323 !important;
             font-size: 1.1rem;
@@ -684,49 +686,61 @@ footer {
             font-weight: 400;
             text-align: left !important;
         }
-        h4{
+
+        h4 {
             font-size: 1.2rem;
-    line-height: 1.5;
+            line-height: 1.5;
         }
-        .logo{
+
+        .logo {
             width: 20%;
-            img{
+
+            img {
                 width: 75%;
             }
         }
-        .mission{
+
+        .mission {
             width: 25%;
+
             // padding: 20px 0;
-            .text{
+            .text {
                 padding-bottom: 20px;
             }
-            .follow{
-                a{
+
+            .follow {
+                a {
                     color: #232323;
                     padding-right: 20px;
-                    i{
+
+                    i {
                         font-size: 30px;
                         padding: 20px 0;
                     }
                 }
             }
         }
-        .about{
+
+        .about {
             width: 25%;
         }
-        .u-link{
+
+        .u-link {
             width: 20%;
-        ul{
-            li{
-                list-style: none;
-                padding: 5px 0;
-                a{
-                    color: #232323;
+
+            ul {
+                li {
+                    list-style: none;
+                    padding: 5px 0;
+
+                    a {
+                        color: #232323;
+                    }
                 }
             }
         }
-        }
     }
+
     .my-container {
         // align-items: center;
         justify-content: space-between;
@@ -743,50 +757,59 @@ footer {
 }
 
 @media screen and (max-width:798px) {
-    footer{
-        .f-footer{
-            .logo{
+    footer {
+        .f-footer {
+            .logo {
                 width: 48%;
                 padding: 20px 0;
             }
-            .mission{
+
+            .mission {
                 width: 48%;
                 padding: 20px 0;
             }
-            .about{
+
+            .about {
                 width: 48%;
                 padding: 20px 0;
             }
-            .u-link{
+
+            .u-link {
                 width: 48%;
                 padding: 20px 0;
             }
         }
     }
 }
+
 @media screen and (max-width:500px) {
-    footer{
-        .f-footer{
+    footer {
+        .f-footer {
             flex-direction: column;
-            .logo{
+
+            .logo {
                 width: 98%;
                 padding: 20px 0;
             }
-            .mission{
+
+            .mission {
                 width: 98%;
                 padding: 20px 0;
             }
-            .about{
+
+            .about {
                 width: 98%;
                 padding: 20px 0;
             }
-            .u-link{
+
+            .u-link {
                 width: 98%;
                 padding: 20px 0;
             }
         }
     }
 }
+
 // footer section ended
 
 
@@ -3027,16 +3050,18 @@ footer {
             font-weight: 600;
             line-height: normal;
         }
-        h5{
+
+        h5 {
             font-weight: 400;
         }
 
         p {
             color: #575757;
-    margin: 0;
-    a{
-        text-decoration: none;
-    }
+            margin: 0;
+
+            a {
+                text-decoration: none;
+            }
         }
     }
 
@@ -3370,19 +3395,22 @@ footer {
         }
     }
 }
+
 @media screen and (max-width:768px) {
-    .contact-section{
-        .asection{
-            .left{
+    .contact-section {
+        .asection {
+            .left {
                 margin: 20px auto;
             }
-            .right{
+
+            .right {
                 margin: 20px auto;
             }
-            
+
         }
     }
 }
+
 // ============================ contact section =========================
 // ============================ myqr section =========================
 .qr-section {
@@ -3522,6 +3550,7 @@ footer {
 
                     .one {
                         margin: 10px;
+
                         a {
                             display: flex;
                             color: var(--sub-color, #0054A1);
@@ -4436,3 +4465,580 @@ footer {
 }
 
 // ============================ chistory QR section =========================
+// ============================ chat-screen =========================
+.chat-screen {
+    // height: 130vh;
+    margin: 40px 0;
+
+    h1 {
+        color: var(--heading-color, #171022);
+        text-align: center;
+        font-family: Inter;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 115.7%;
+        /* 52.065px */
+        letter-spacing: 0.45px;
+    }
+
+    .asection {
+        .account {
+
+            // margin: 20px 0;
+            .my-tab {
+                background-color: #fff !important;
+                border-radius: 20px !important;
+                box-shadow: 0 4px 21px rgba(22, 116, 186, 0.1019607843) !important;
+                padding: 15px 0 !important;
+
+                .mynav-pills {
+                    list-style: none;
+                    margin: 0;
+                    transition: all .3s;
+
+                    .my-tab-btn {
+                        text-align: left !important;
+                        color: #575757;
+                        font-weight: 500;
+                        padding: 15px;
+                        text-decoration: none;
+                        transition: all .3s;
+                        font-size: 16px;
+                        background-color: #fff;
+                        border-radius: 0;
+                        margin: 0;
+
+                        &:active {
+                            color: #0054a1;
+                        }
+
+                        &:hover {
+                            background-color: rgb(240, 240, 240);
+                            color: #0054a1;
+                        }
+                    }
+
+                    .active {
+                        background-color: rgb(240, 240, 240);
+                        color: #0054a1;
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+    .profile {
+        margin: 20px auto;
+
+        .my-tab2 {
+            .item {
+                .content {
+                    .image {
+                        width: 45px;
+
+                        h4 {
+                            color: var(--filld-clr, #7C7C7C);
+                            font-size: 20.2px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                        }
+                    }
+
+                    .text {
+                        .order-info {
+                            p {
+                                color: var(--sub-color, #0054A1);
+                                font-family: Inter;
+                                font-size: 15px;
+                                font-style: normal;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .chat-content {
+                border-radius: 9px;
+                border: 1px solid #E7DBEF;
+                background: #FFF;
+
+                .chat-head {
+                    padding: 12px;
+                    display: flex;
+                    align-items: center;
+                    border-radius: 9px;
+                    border: 1px solid #E7DBEF;
+                    background: #FFF;
+
+                    .image {
+                        width: 45px;
+                        background-color: #F0F0F0;
+                        padding: 10px;
+                        border-radius: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin-left: 10px;
+
+                        h4 {
+                            color: var(--filld-clr, #7C7C7C);
+                            font-size: 20.2px;
+                            font-style: normal;
+                            font-weight: 500;
+                            line-height: normal;
+                            margin: 0;
+                        }
+                    }
+
+                    h5 {
+                        color: #292929;
+                        font-family: Inter;
+                        font-size: 18px;
+                        padding-left: 10px;
+                        margin: 0;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: normal;
+                    }
+
+                }
+
+                .chat-body {
+                    padding: 22px 20px;
+                    display: flex;
+                    flex-direction: column;
+
+                    .first-massage {
+                        h6 {
+                            color: #292929;
+                            font-family: Inter;
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 16px;
+                            /* 123.077% */
+                            display: inline;
+                            margin: 0;
+                        }
+
+                        p {
+                            color: rgba(57, 68, 104, 0.68);
+                            display: inline;
+                            font-family: Inter;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            margin: 0;
+                        }
+
+                        .massage {
+                            display: block;
+                            width: 60%;
+                            color: var(--sub-color, #0054A1);
+                            // font-family: Poppins;
+                            font-size: 13.2px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: 0.132px;
+                            padding: 10px;
+                            border-radius: 0px 10px 10px 10px;
+                            background: #F0F1F1;
+                        }
+                    }
+
+                    .second-massage {
+                        text-align: right;
+
+                        h6 {
+                            color: #292929;
+                            font-family: Inter;
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 600;
+                            line-height: 16px;
+                            /* 123.077% */
+                            display: inline;
+                            margin: 0;
+                        }
+
+                        p {
+                            color: rgba(57, 68, 104, 0.68);
+                            display: inline;
+                            font-family: Inter;
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            margin: 0;
+                        }
+
+                        .massage {
+                            border-radius: 10px 0px 10px 10px;
+                            background: var(--grey, #F0F0F0);
+                            color: var(--filld-clr, #7C7C7C);
+                            // font-family: Poppins;
+                            width: 60%;
+                            display: block;
+                            padding: 10px;
+                            font-size: 13.2px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                            letter-spacing: 0.132px;
+                            margin-left: 40%;
+                        }
+                    }
+
+                    .inputbox {
+                        position: relative;
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        margin-top: 35px;
+                        padding: 0;
+
+                        input {
+                            width: 100%;
+                            background-color: rgb(240, 240, 240);
+                            border-radius: 68px;
+                            border: 1px solid var(--New-Color, #0090D4);
+                            background: #FFF;
+                            padding: 10px 24px;
+
+                            &::placeholder {
+                                color: var(--light-color, #395A68);
+                                font-size: 12px;
+                                font-style: italic;
+                                font-weight: 400;
+                                line-height: normal;
+                            }
+
+                            &:focus-visible {
+                                outline: none;
+                            }
+                        }
+
+                        img {
+                            position: absolute;
+                            padding: 0px 6px;
+                            width: 50px;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+// ============================ chat-screen =========================
+// ============================ select-user =========================
+.select-user {
+    // height: 130vh;
+    margin: 40px 0;
+
+    h1 {
+        color: var(--heading-color, #171022);
+        text-align: center;
+        font-family: Inter;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 115.7%;
+        /* 52.065px */
+        letter-spacing: 0.45px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    .profile {
+        margin: 20px auto;
+
+        .member {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+            border-radius: 10px;
+            background: var(--grey, #F0F0F0);
+            padding: 10px 20px;
+
+            .first {
+                display: flex;
+                align-items: center;
+
+                .image {
+                    width: 50px;
+                    background-color: #dbdbdb;
+                    padding: 15px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-left: 10px;
+
+                    h4 {
+                        color: #444;
+                        font-family: Inter;
+                        font-size: 20.2px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        margin: 0;
+                    }
+                }
+
+                h5 {
+                    color: #292929;
+                    font-family: Inter;
+                    font-size: 18px;
+                    padding-left: 10px;
+                    margin: 0;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                }
+            }
+
+            .second {
+                svg {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// ============================ select-user =========================
+// ============================ after-qr =========================
+.after-qr {
+    // height: 130vh;
+    margin: 40px 0;
+
+    h1 {
+        color: var(--heading-color, #171022);
+        text-align: center;
+        font-family: Inter;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 115.7%;
+        /* 52.065px */
+        letter-spacing: 0.45px;
+    }
+
+    p {
+        margin: 0;
+        color: var(--head-bg, #171022);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .profile {
+        margin: 40px auto;
+
+        .btn-sec {
+            width: 100%;
+            text-align: center;
+
+            .mylbtn {
+                @include gbtn;
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            border-radius: 10px;
+            background: var(--grey, #F0F0F0);
+            padding: 10px 16px;
+            margin: 15px 0;
+
+            input {
+                margin-right: 15px;
+                width: 23px;
+                height: 23px;
+                // background-color: #fff;
+                border: 2px solid #0054A1;
+            }
+
+            h1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #DBDBDB;
+                color: #444;
+                font-family: Inter;
+                font-size: 20.2px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                margin: 0;
+            }
+
+            h4 {
+                margin: 0;
+                color: var(--heading-color, #171022);
+                font-family: Inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                padding-left: 10px;
+            }
+        }
+
+        .inputbox {
+            position: relative;
+            // display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 0;
+
+            label {
+                color: var(--head-bg, #171022);
+                font-family: Inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+
+            input {
+                margin: 5px 0;
+                width: 100%;
+                background-color: rgb(240, 240, 240);
+                border-radius: 10px;
+                border: none;
+                padding: 15px;
+                color: #0054a1;
+
+                &::placeholder {
+                    color: var(--filld-clr, #7C7C7C);
+                    font-family: Inter;
+                    font-size: 15px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            img {
+                position: absolute;
+                padding-right: 15px;
+                width: 33px;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            background-color: rgb(240, 240, 240);
+            border-radius: 10px;
+            border: none;
+            padding: 15px;
+            color: #0054a1;
+            margin: 5px 0;
+
+            &::placeholder {
+
+                color: var(--filld-clr, #7C7C7C);
+                font-family: Inter;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+
+            &:focus-visible {
+                outline: none;
+            }
+        }
+
+        .three-sec {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            .one {
+                border-radius: 20px;
+                background: #FFF;
+                cursor: pointer;
+                /* shado */
+                box-shadow: 0px 4px 21px 0px rgba(0, 59, 149, 0.16);
+                margin: 15px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                // padding: 20px 0;
+
+                img {
+                    padding: 0 40px;
+                }
+
+                p {
+                    color: #0054A1;
+                    text-align: center;
+                    font-family: Inter;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 159.523%;
+                    margin: 10px 0;
+                    // padding: 15px 0;
+                    /* 25.524px */
+                }
+
+                .slide {
+                    width: 80%;
+                    position: relative;
+                    left: 0;
+                    top: 11px;
+
+                    input {
+                        width: 20px;
+                        height: 20px;
+                        border: 2px solid #0054A1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:402px) {
+    .after-qr {
+        .profile {
+            .three-sec {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// ============================ after-qr =========================
